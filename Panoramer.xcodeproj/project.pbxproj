@@ -133,6 +133,7 @@
 		E76B3D701CC54DB4004F7490 /* mapIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76B3D6E1CC54DB4004F7490 /* mapIcon@2x.png */; };
 		E76B3D721CC54F54004F7490 /* mainBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = E76B3D711CC54F54004F7490 /* mainBkg.png */; };
 		E7AD81541CC974A20096F1B3 /* Panoramer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81531CC974A20096F1B3 /* Panoramer-Info.plist */; };
+		E7AD81561CC979910096F1B3 /* profileIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81551CC979910096F1B3 /* profileIcon@2x.png */; };
 		E7BBE8F61C0CA7B400C78554 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BBE8F51C0CA7B400C78554 /* CoreData.framework */; };
 		E7D29D8A1C206EC600FD58F6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D29D891C206EC600FD58F6 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -372,6 +373,7 @@
 		E76B3D6E1CC54DB4004F7490 /* mapIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapIcon@2x.png"; sourceTree = "<group>"; };
 		E76B3D711CC54F54004F7490 /* mainBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBkg.png; sourceTree = "<group>"; };
 		E7AD81531CC974A20096F1B3 /* Panoramer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Panoramer-Info.plist"; sourceTree = "<group>"; };
+		E7AD81551CC979910096F1B3 /* profileIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profileIcon@2x.png"; sourceTree = "<group>"; };
 		E7BBE8F51C0CA7B400C78554 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E7D29D891C206EC600FD58F6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -822,6 +824,7 @@
 				E76B3D711CC54F54004F7490 /* mainBkg.png */,
 				E76B3D6D1CC54DB4004F7490 /* toursIcon@2x.png */,
 				E76B3D6E1CC54DB4004F7490 /* mapIcon@2x.png */,
+				E7AD81551CC979910096F1B3 /* profileIcon@2x.png */,
 				E76B3D521CC53C3B004F7490 /* loginBkg.png */,
 				E76B3CD81CC53AE9004F7490 /* 1.jpg */,
 				E76B3CD91CC53AE9004F7490 /* 1_1.jpg */,
@@ -974,6 +977,7 @@
 				E76B3D0D1CC53AE9004F7490 /* LICENSE.txt in Resources */,
 				E76B3D461CC53AE9004F7490 /* 2_preview.jpg in Resources */,
 				E76B3D411CC53AE9004F7490 /* 1_1.jpg in Resources */,
+				E7AD81561CC979910096F1B3 /* profileIcon@2x.png in Resources */,
 				E76B3D471CC53AE9004F7490 /* 3.jpg in Resources */,
 				E76B3D4A1CC53AE9004F7490 /* 4_preview.jpg in Resources */,
 				E76B3D4D1CC53AE9004F7490 /* pinRed.png in Resources */,
