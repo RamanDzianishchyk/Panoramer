@@ -132,6 +132,7 @@
 		E76B3D6F1CC54DB4004F7490 /* toursIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76B3D6D1CC54DB4004F7490 /* toursIcon@2x.png */; };
 		E76B3D701CC54DB4004F7490 /* mapIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76B3D6E1CC54DB4004F7490 /* mapIcon@2x.png */; };
 		E76B3D721CC54F54004F7490 /* mainBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = E76B3D711CC54F54004F7490 /* mainBkg.png */; };
+		E7AD81541CC974A20096F1B3 /* Panoramer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81531CC974A20096F1B3 /* Panoramer-Info.plist */; };
 		E7BBE8F61C0CA7B400C78554 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BBE8F51C0CA7B400C78554 /* CoreData.framework */; };
 		E7D29D8A1C206EC600FD58F6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D29D891C206EC600FD58F6 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -370,6 +371,7 @@
 		E76B3D6D1CC54DB4004F7490 /* toursIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toursIcon@2x.png"; sourceTree = "<group>"; };
 		E76B3D6E1CC54DB4004F7490 /* mapIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapIcon@2x.png"; sourceTree = "<group>"; };
 		E76B3D711CC54F54004F7490 /* mainBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBkg.png; sourceTree = "<group>"; };
+		E7AD81531CC974A20096F1B3 /* Panoramer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Panoramer-Info.plist"; sourceTree = "<group>"; };
 		E7BBE8F51C0CA7B400C78554 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E7D29D891C206EC600FD58F6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -854,6 +856,7 @@
 		E76B3D511CC53B82004F7490 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E7AD81531CC974A20096F1B3 /* Panoramer-Info.plist */,
 				E76B3C0B1CC53AE8004F7490 /* InfoPlist.strings */,
 				E76B3C421CC53AE9004F7490 /* LaunchScreen.xib */,
 				E76B3CB41CC53AE9004F7490 /* main.m */,
@@ -985,6 +988,7 @@
 				E76B3D3F1CC53AE9004F7490 /* Panoramer-Info.plist in Resources */,
 				5C21CE7015A3D6B10089E908 /* icon_retina.png in Resources */,
 				E76B3CF81CC53AE9004F7490 /* TopBar.xib in Resources */,
+				E7AD81541CC974A20096F1B3 /* Panoramer-Info.plist in Resources */,
 				E76B3CF11CC53AE9004F7490 /* PRInfoController.xib in Resources */,
 				E76B3D4C1CC53AE9004F7490 /* hotspot_red.png in Resources */,
 			);
