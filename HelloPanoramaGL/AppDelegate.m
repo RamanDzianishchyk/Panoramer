@@ -20,6 +20,7 @@
 #import "LoginViewController.h"
 #import "MapController.h"
 #import "Model.h"
+#import "PRProfileController.h"
 #import "PRSceneController.h"
 #import "PRService.h"
 #import "PRToursController.h"
@@ -890,11 +891,13 @@
 - (void)setupMainScreen {
   UITabBarController *tabBarController = [[UITabBarController alloc] init];
 
-  PRToursController *toursVC = [[PRToursController alloc] init];
+  PRToursController *toursVC = [PRToursController new];
   toursVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Туры" image:[UIImage imageNamed:@"toursIcon.png"] tag:1];
-  MapController *mapVC = [[MapController alloc] init];
+  MapController *mapVC = [MapController new];
   mapVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Карта" image:[UIImage imageNamed:@"mapIcon.png"] tag:2];
-  [tabBarController setViewControllers:@[ toursVC, mapVC ]];
+  PRProfileController *profileVC = [PRProfileController new];
+  profileVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Профиль" image:[UIImage imageNamed:@"profileIcon.png"] tag:3];
+  [tabBarController setViewControllers:@[ toursVC, mapVC, profileVC ]];
   [self.window setRootViewController:tabBarController];
 }
 

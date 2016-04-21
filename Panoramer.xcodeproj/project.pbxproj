@@ -134,6 +134,8 @@
 		E76B3D721CC54F54004F7490 /* mainBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = E76B3D711CC54F54004F7490 /* mainBkg.png */; };
 		E7AD81541CC974A20096F1B3 /* Panoramer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81531CC974A20096F1B3 /* Panoramer-Info.plist */; };
 		E7AD81561CC979910096F1B3 /* profileIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81551CC979910096F1B3 /* profileIcon@2x.png */; };
+		E7AD815B1CC979F90096F1B3 /* PRProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD81591CC979F90096F1B3 /* PRProfileController.m */; };
+		E7AD815C1CC979F90096F1B3 /* PRProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AD815A1CC979F90096F1B3 /* PRProfileController.xib */; };
 		E7BBE8F61C0CA7B400C78554 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BBE8F51C0CA7B400C78554 /* CoreData.framework */; };
 		E7D29D8A1C206EC600FD58F6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D29D891C206EC600FD58F6 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -374,6 +376,9 @@
 		E76B3D711CC54F54004F7490 /* mainBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBkg.png; sourceTree = "<group>"; };
 		E7AD81531CC974A20096F1B3 /* Panoramer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Panoramer-Info.plist"; sourceTree = "<group>"; };
 		E7AD81551CC979910096F1B3 /* profileIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profileIcon@2x.png"; sourceTree = "<group>"; };
+		E7AD81581CC979F90096F1B3 /* PRProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PRProfileController.h; path = ProfileController/PRProfileController.h; sourceTree = "<group>"; };
+		E7AD81591CC979F90096F1B3 /* PRProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PRProfileController.m; path = ProfileController/PRProfileController.m; sourceTree = "<group>"; };
+		E7AD815A1CC979F90096F1B3 /* PRProfileController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PRProfileController.xib; path = ProfileController/PRProfileController.xib; sourceTree = "<group>"; };
 		E7BBE8F51C0CA7B400C78554 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E7D29D891C206EC600FD58F6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -472,6 +477,7 @@
 		E76B3C0D1CC53AE8004F7490 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				E7AD81571CC979C00096F1B3 /* ProfileController */,
 				E76B3D611CC541FC004F7490 /* MapController */,
 				E76B3C0E1CC53AE8004F7490 /* BaseController */,
 				E76B3C111CC53AE8004F7490 /* InfoController */,
@@ -894,6 +900,16 @@
 			path = MapController;
 			sourceTree = "<group>";
 		};
+		E7AD81571CC979C00096F1B3 /* ProfileController */ = {
+			isa = PBXGroup;
+			children = (
+				E7AD81581CC979F90096F1B3 /* PRProfileController.h */,
+				E7AD81591CC979F90096F1B3 /* PRProfileController.m */,
+				E7AD815A1CC979F90096F1B3 /* PRProfileController.xib */,
+			);
+			name = ProfileController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -970,6 +986,7 @@
 				E76B3D2B1CC53AE9004F7490 /* README.txt in Resources */,
 				E76B3CF31CC53AE9004F7490 /* LoginViewController.xib in Resources */,
 				E76B3D051CC53AE9004F7490 /* LaunchScreen.xib in Resources */,
+				E7AD815C1CC979F90096F1B3 /* PRProfileController.xib in Resources */,
 				E76B3D531CC53C3B004F7490 /* loginBkg.png in Resources */,
 				E76B3D431CC53AE9004F7490 /* 1_3.jpg in Resources */,
 				E76B3D491CC53AE9004F7490 /* 4.jpg in Resources */,
@@ -1078,6 +1095,7 @@
 				E76B3D111CC53AE9004F7490 /* PLHotspot.m in Sources */,
 				E76B3D201CC53AE9004F7490 /* PLSpherical2Panorama.m in Sources */,
 				E76B3D081CC53AE9004F7490 /* glues_mipmap.c in Sources */,
+				E7AD815B1CC979F90096F1B3 /* PRProfileController.m in Sources */,
 				E76B3D1A1CC53AE9004F7490 /* PLPanoramaBase.m in Sources */,
 				E76B3D021CC53AE9004F7490 /* MBProgressHUD.m in Sources */,
 				E76B3D2D1CC53AE9004F7490 /* NSArray+PureLayout.m in Sources */,
