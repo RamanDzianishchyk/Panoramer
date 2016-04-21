@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PRTourController">
+            <connections>
+                <outlet property="infoContainer" destination="qME-qS-JDN" id="ptY-Vm-GAT"/>
+                <outlet property="startTourBtn" destination="EKm-ds-xGk" id="niW-n3-m1c"/>
+                <outlet property="tableView" destination="isw-L7-1Rq" id="lZe-8d-KhT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USi-pj-mPI" userLabel="baseContainer">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnk-cd-nTr">
+                            <rect key="frame" x="0.0" y="440" width="320" height="64"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKm-ds-xGk">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="Начать тур">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onStartBtnTap:" destination="-1" eventType="touchUpInside" id="Ksw-ns-xtm"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="EKm-ds-xGk" secondAttribute="bottom" id="UgU-Ek-hVa"/>
+                                <constraint firstAttribute="height" constant="64" id="dfR-RL-VkL"/>
+                                <constraint firstAttribute="trailing" secondItem="EKm-ds-xGk" secondAttribute="trailing" id="dm7-9t-ZwV"/>
+                                <constraint firstItem="EKm-ds-xGk" firstAttribute="leading" secondItem="mnk-cd-nTr" secondAttribute="leading" id="gfj-e5-yoy"/>
+                                <constraint firstItem="EKm-ds-xGk" firstAttribute="top" secondItem="mnk-cd-nTr" secondAttribute="top" id="owq-fW-HpG"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="isw-L7-1Rq">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="1sy-le-90g"/>
+                                <outlet property="delegate" destination="-1" id="2Xw-6P-fvW"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="mnk-cd-nTr" firstAttribute="leading" secondItem="USi-pj-mPI" secondAttribute="leading" id="2Xf-K1-fwl"/>
+                        <constraint firstAttribute="trailing" secondItem="mnk-cd-nTr" secondAttribute="trailing" id="8cf-WS-XpC"/>
+                        <constraint firstAttribute="trailing" secondItem="isw-L7-1Rq" secondAttribute="trailing" id="BhP-bP-yLv"/>
+                        <constraint firstAttribute="bottom" secondItem="mnk-cd-nTr" secondAttribute="bottom" id="LlB-Gc-0hH"/>
+                        <constraint firstItem="isw-L7-1Rq" firstAttribute="top" secondItem="USi-pj-mPI" secondAttribute="top" id="Vht-Gd-Cja"/>
+                        <constraint firstItem="isw-L7-1Rq" firstAttribute="leading" secondItem="USi-pj-mPI" secondAttribute="leading" id="aAZ-5A-0rm"/>
+                        <constraint firstItem="mnk-cd-nTr" firstAttribute="top" secondItem="isw-L7-1Rq" secondAttribute="bottom" id="lpb-Ng-TaZ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qME-qS-JDN">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qME-qS-JDN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0q7-ds-Srh"/>
+                <constraint firstItem="qME-qS-JDN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0uY-lX-SYn"/>
+                <constraint firstItem="qME-qS-JDN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="2OC-sv-tEU"/>
+                <constraint firstItem="USi-pj-mPI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EHN-fe-MmW"/>
+                <constraint firstItem="USi-pj-mPI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Esw-uZ-ezk"/>
+                <constraint firstItem="qME-qS-JDN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GDx-Sf-fCJ"/>
+                <constraint firstAttribute="bottom" secondItem="qME-qS-JDN" secondAttribute="bottom" id="J31-4a-bqa"/>
+                <constraint firstItem="qME-qS-JDN" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="32" id="OXN-ng-2iu"/>
+                <constraint firstAttribute="trailing" secondItem="qME-qS-JDN" secondAttribute="trailing" id="SQK-dY-B19"/>
+                <constraint firstItem="qME-qS-JDN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.75" id="YQj-ou-Lkh"/>
+                <constraint firstAttribute="trailing" secondItem="USi-pj-mPI" secondAttribute="trailing" id="ZXW-cD-KZH"/>
+                <constraint firstAttribute="bottom" secondItem="USi-pj-mPI" secondAttribute="bottom" id="yS3-zv-oy7"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="0q7-ds-Srh"/>
+                    <exclude reference="2OC-sv-tEU"/>
+                    <exclude reference="OXN-ng-2iu"/>
+                    <exclude reference="YQj-ou-Lkh"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9059"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PRSceneController">
+            <connections>
+                <outlet property="infoContainer" destination="h0q-lJ-ERI" id="q4N-Jr-kGc"/>
+                <outlet property="sceneView" destination="ft4-wB-z7K" id="gGV-j5-90W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ft4-wB-z7K" customClass="PLView">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0q-lJ-ERI">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="h0q-lJ-ERI" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="0Mx-l0-Eh2"/>
+                <constraint firstAttribute="bottom" secondItem="ft4-wB-z7K" secondAttribute="bottom" id="7tW-Ib-gw8"/>
+                <constraint firstItem="h0q-lJ-ERI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="A44-yO-QO4"/>
+                <constraint firstItem="h0q-lJ-ERI" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.75" id="IsT-gS-duG"/>
+                <constraint firstItem="h0q-lJ-ERI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SBB-6I-BJb"/>
+                <constraint firstAttribute="trailing" secondItem="h0q-lJ-ERI" secondAttribute="trailing" id="ThY-o0-Fnk"/>
+                <constraint firstAttribute="bottom" secondItem="h0q-lJ-ERI" secondAttribute="bottom" id="aqn-nt-1Xr"/>
+                <constraint firstItem="h0q-lJ-ERI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eSi-Wa-adU"/>
+                <constraint firstItem="h0q-lJ-ERI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="32" id="gQ8-CI-SRQ"/>
+                <constraint firstItem="ft4-wB-z7K" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pCD-xW-mvr"/>
+                <constraint firstItem="ft4-wB-z7K" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="svo-Ty-x2v"/>
+                <constraint firstAttribute="trailing" secondItem="ft4-wB-z7K" secondAttribute="trailing" id="tjh-Og-O8I"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="0Mx-l0-Eh2"/>
+                    <exclude reference="IsT-gS-duG"/>
+                    <exclude reference="SBB-6I-BJb"/>
+                    <exclude reference="gQ8-CI-SRQ"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="251" y="124"/>
+        </view>
+    </objects>
+</document>

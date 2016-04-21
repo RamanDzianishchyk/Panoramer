@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F1021" minimumToolsVersion="Automatic">
+    <entity name="Hotspot" representedClassName="Hotspot" isAbstract="YES" syncable="YES">
+        <attribute name="aboutDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="idProp" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="x" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="Image" representedClassName="Image" syncable="YES">
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="InfoHotspot" representedClassName="InfoHotspot" parentEntity="Hotspot" syncable="YES">
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="Scene" representedClassName="Scene" syncable="YES">
+        <attribute name="aboutDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idProp" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="hotspots" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Hotspot" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Image" syncable="YES"/>
+        <relationship name="preview" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" syncable="YES"/>
+        <relationship name="tour" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tour" inverseName="scenes" inverseEntity="Tour" syncable="YES"/>
+    </entity>
+    <entity name="Tour" representedClassName="Tour" syncable="YES">
+        <attribute name="aboutDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idProp" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" syncable="YES"/>
+        <relationship name="preview" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" syncable="YES"/>
+        <relationship name="scenes" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Scene" inverseName="tour" inverseEntity="Scene" syncable="YES"/>
+    </entity>
+    <entity name="TransitionHotspot" representedClassName="TransitionHotspot" parentEntity="Hotspot" syncable="YES">
+        <attribute name="sceneId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Hotspot" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="Image" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="InfoHotspot" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="Location" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="Scene" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="Tour" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="TransitionHotspot" positionX="160" positionY="192" width="128" height="60"/>
+    </elements>
+</model>
