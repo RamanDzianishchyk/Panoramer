@@ -6,8 +6,8 @@
 //  Copyright © 2015 GRSU. All rights reserved.
 //
 
-#import "PRService.h"
 #import "Model.h"
+#import "PRService.h"
 
 @interface PRService ()
 
@@ -37,18 +37,13 @@
 
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Model.sqlite"];
 
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if ([fileManager fileExistsAtPath:storeURL.path]) {
-      [fileManager removeItemAtURL:storeURL error:nil];
-    }
-    NSLog(@"%@", storeURL);
-
-    NSError *error = nil;
     self.persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
+    NSError *error = nil;
     if (![self.persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
       NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
       abort();
     }
+    NSLog(@"%@", storeURL);
 
     self.managedObjectContext = [[NSManagedObjectContext alloc] init];
     [self.managedObjectContext setPersistentStoreCoordinator:self.persistentStoreCoordinator];

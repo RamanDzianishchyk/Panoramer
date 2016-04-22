@@ -23,6 +23,10 @@
 
 typedef NS_ENUM(NSInteger, SceneType) { SceneTypeCubic, SceneTypeCylindrical, SceneTypeSphere };
 
+#pragma mark - Keys
+extern NSString *const kPRFirstRunKey;
+extern NSString *const kPRAuthKeychainKey;
+
 #pragma mark - Default values
 extern NSInteger const kPRTopBarHeight;
 
@@ -30,6 +34,12 @@ extern NSInteger const kPRTopBarHeight;
 extern NSUInteger const kPRMainThemeColor;
 extern NSUInteger const kPRPlaceholderColor;
 extern NSUInteger const kPRTextColor;
+
+#pragma mark - Limits
+extern NSInteger const kPRNicknameMaxLength;
+extern NSInteger const kPRFirstNameMaxLength;
+extern NSInteger const kPRPasswordMaxLength;
+extern NSInteger const kPRCityMaxLength;
 
 #pragma mark - Collection View Layout
 extern CGFloat const kPRHorizontalSpacingInterItems;

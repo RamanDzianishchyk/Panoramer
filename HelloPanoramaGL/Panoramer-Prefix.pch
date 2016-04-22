@@ -29,4 +29,5 @@
     #import "PureLayout.h"
     #import "PRConstants.h"
     #import "UIView+CornerRadius.h"
+    #import "NSString+NSStringAdditions.h"
 #endif
