@@ -8,11 +8,21 @@
 
 #import "PRConstants.h"
 
+#pragma mark - Keys
+NSString *const kPRFirstRunKey = @"kBZFirstRunKey";
+NSString *const kPRAuthKeychainKey = @"kBZAuthKeychainKey";
+
 #pragma mark - Default values
 NSInteger const kPRTopBarHeight = 64;
 
 #pragma mark - Colors
 NSUInteger const kPRMainThemeColor = 0x40B14E;
+
+#pragma mark - Limits
+NSInteger const kPRNicknameMaxLength = 15;
+NSInteger const kPRFirstNameMaxLength = 15;
+NSInteger const kPRPasswordMaxLength = 15;
+NSInteger const kPRCityMaxLength = 20;
 
 #pragma mark - Collection View Layout
 CGFloat const kPRHorizontalSpacingInterItems = 8;

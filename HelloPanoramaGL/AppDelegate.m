@@ -17,9 +17,11 @@
  */
 
 #import "AppDelegate.h"
+#import "FXKeychain.h"
 #import "LoginViewController.h"
 #import "MapController.h"
 #import "Model.h"
+#import "PREditUserController.h"
 #import "PRProfileController.h"
 #import "PRSceneController.h"
 #import "PRService.h"
@@ -27,14 +29,27 @@
 
 @interface AppDelegate ()
 
+- (void)loginWithEmail:(NSString *)email password:(NSString *)password successBlock:(void (^)(BOOL))success failureBlock:(void (^)(NSError *))failure;
 - (void)setupLoginController;
 - (void)setupMainScreen;
+
+- (void)resetKeychain;
+- (BOOL)saveToKeychainEmail:(NSString *)email andPassword:(NSString *)password;
+// email : password
+- (NSDictionary *)loadAuthCredentialFromKeychain;
 
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  if (![defaults objectForKey:kPRFirstRunKey]) {
+    [self resetKeychain];
+    [defaults setBool:NO forKey:kPRFirstRunKey];
+    [defaults synchronize];
+  }
+
   NSManagedObjectContext *context = [[PRService sharedService] context];
 
   Image *preview1 = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([Image class]) inManagedObjectContext:context];
@@ -831,7 +846,31 @@
     [self.window addSubview:imageView];
     [self.window makeKeyAndVisible];
   }
-  [self setupLoginController];
+  NSDictionary *cred = [self loadAuthCredentialFromKeychain];
+  if (cred != nil) {
+    __weak typeof(self) weakSelf = self;
+    [self loginWithEmail:[[cred allKeys] firstObject]
+        password:[[cred allValues] firstObject]
+        successBlock:^(BOOL isLogin) {
+          if (isLogin) {
+            NSLog(@"Registration succeed");
+            //            [weakSelf setupMainScreen];
+            PREditUserController *edit = [[PREditUserController alloc] init];
+            [edit configureForUser:nil];
+            [weakSelf.window setRootViewController:edit];
+          } else {
+            NSLog(@"Auto login succeed");
+            [PRService sharedService];
+            [weakSelf setupMainScreen];
+          }
+        }
+        failureBlock:^(NSError *error) {
+          NSLog(@"Error: %@", error.localizedDescription);
+          [weakSelf setupLoginController];
+        }];
+  } else {
+    [self setupLoginController];
+  }
   return YES;
 }
 
@@ -882,8 +921,31 @@
   __weak typeof(self) weakSelf = self;
   LoginViewController *loginVC = [[LoginViewController alloc] init];
   loginVC.onSkipButtonTapBlock = ^{
+    [self resetKeychain];
     [weakSelf setupMainScreen];
     [PRService sharedService];
+  };
+  loginVC.didLoginBlock = ^(NSString *login, NSString *password) {
+    [weakSelf saveToKeychainEmail:login andPassword:password];
+    [weakSelf loginWithEmail:login
+        password:password
+        successBlock:^(BOOL isLogin) {
+          if (isLogin) {
+            NSLog(@"Registration succeed");
+            //            [weakSelf setupMainScreen];
+            PREditUserController *edit = [[PREditUserController alloc] init];
+            [edit configureForUser:nil];
+            [weakSelf.window setRootViewController:edit];
+          } else {
+            NSLog(@"Auto login succeed");
+            [PRService sharedService];
+            [weakSelf setupMainScreen];
+          }
+        }
+        failureBlock:^(NSError *error) {
+          NSLog(@"Error: %@", error.localizedDescription);
+          [weakSelf setupLoginController];
+        }];
   };
 
   [self.window setRootViewController:loginVC];
@@ -893,7 +955,7 @@
   UITabBarController *tabBarController = [[UITabBarController alloc] init];
   [tabBarController.tabBar setBarTintColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
 
-  [UITabBarItem.appearance setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor grayColor] } forState:UIControlStateNormal];
+  [UITabBarItem.appearance setTitleTextAttributes:@{ NSForegroundColorAttributeName : UIColorFromHexRGB(0x3C9DF4, 1.0) } forState:UIControlStateNormal];
   [UITabBarItem.appearance setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor] } forState:UIControlStateSelected];
   [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
 
@@ -915,6 +977,38 @@
     [[UINavigationController alloc] initWithRootViewController:profileVC]
   ]];
   [self.window setRootViewController:tabBarController];
+}
+
+- (void)resetKeychain {
+  [[FXKeychain defaultKeychain] removeObjectForKey:kPRAuthKeychainKey];
+}
+
+- (BOOL)saveToKeychainEmail:(NSString *)email andPassword:(NSString *)password {
+  if ([NSString isNilOrEmpty:email] || [NSString isNilOrEmpty:password]) {
+    NSLog(@"Invalid data to save in keychains");
+    return NO;
+  }
+  [[FXKeychain defaultKeychain] setObject:@{ email : password } forKey:kPRAuthKeychainKey];
+  return YES;
+}
+
+- (NSDictionary *)loadAuthCredentialFromKeychain {
+  return [[FXKeychain defaultKeychain] objectForKey:kPRAuthKeychainKey];
+}
+
+- (void)loginWithEmail:(NSString *)email password:(NSString *)password successBlock:(void (^)(BOOL))success failureBlock:(void (^)(NSError *))failure {
+  if ([NSString isNilOrEmpty:email] || [NSString isNilOrEmpty:password]) {
+    NSString *errorMessage = @"Invalid credentials for login!";
+    NSLog(@"%@", errorMessage);
+    if (failure != nil) {
+      failure([NSError errorWithDomain:@"test" code:1 userInfo:@{NSLocalizedDescriptionKey : errorMessage}]);
+    }
+  } else {
+    // TODO: LOGIN METHOD
+    if (success != nil) {
+      success(YES);
+    }
+  }
 }
 
 @end

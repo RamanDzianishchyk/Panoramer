@@ -145,6 +145,17 @@
 		E7AD81721CC99AF50096F1B3 /* BlackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81711CC99AF50096F1B3 /* BlackArrow@2x.png */; };
 		E7BBE8F61C0CA7B400C78554 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BBE8F51C0CA7B400C78554 /* CoreData.framework */; };
 		E7D29D8A1C206EC600FD58F6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D29D891C206EC600FD58F6 /* MapKit.framework */; };
+		F18DC1A71CC9B05000948961 /* BZLimitedTFController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1A51CC9B05000948961 /* BZLimitedTFController.m */; };
+		F18DC1A81CC9B05000948961 /* BZLimitedTFController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18DC1A61CC9B05000948961 /* BZLimitedTFController.xib */; };
+		F18DC1AD1CC9B07600948961 /* PREditUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1AB1CC9B07600948961 /* PREditUserController.m */; };
+		F18DC1AE1CC9B07600948961 /* PREditUserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18DC1AC1CC9B07600948961 /* PREditUserController.xib */; };
+		F18DC1C01CC9B0B100948961 /* FXKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1BE1CC9B0B100948961 /* FXKeychain.m */; };
+		F18DC1C11CC9B0B100948961 /* LICENCE.md in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1BF1CC9B0B100948961 /* LICENCE.md */; };
+		F18DC1C61CC9B0CF00948961 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1C31CC9B0CF00948961 /* User.m */; };
+		F18DC1C71CC9B0CF00948961 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1C51CC9B0CF00948961 /* User+CoreDataProperties.m */; };
+		F18DC1CC1CC9B0EC00948961 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1C91CC9B0EC00948961 /* DateFormatter.m */; };
+		F18DC1CD1CC9B0EC00948961 /* NSString+NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1CB1CC9B0EC00948961 /* NSString+NSStringAdditions.m */; };
+		F18DC1CF1CC9B16300948961 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18DC1CE1CC9B16300948961 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -397,6 +408,24 @@
 		E7AD81711CC99AF50096F1B3 /* BlackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlackArrow@2x.png"; sourceTree = "<group>"; };
 		E7BBE8F51C0CA7B400C78554 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E7D29D891C206EC600FD58F6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F18DC1A41CC9B05000948961 /* BZLimitedTFController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZLimitedTFController.h; sourceTree = "<group>"; };
+		F18DC1A51CC9B05000948961 /* BZLimitedTFController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZLimitedTFController.m; sourceTree = "<group>"; };
+		F18DC1A61CC9B05000948961 /* BZLimitedTFController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BZLimitedTFController.xib; sourceTree = "<group>"; };
+		F18DC1AA1CC9B07600948961 /* PREditUserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PREditUserController.h; sourceTree = "<group>"; };
+		F18DC1AB1CC9B07600948961 /* PREditUserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PREditUserController.m; sourceTree = "<group>"; };
+		F18DC1AC1CC9B07600948961 /* PREditUserController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PREditUserController.xib; sourceTree = "<group>"; };
+		F18DC1BD1CC9B0B100948961 /* FXKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXKeychain.h; sourceTree = "<group>"; };
+		F18DC1BE1CC9B0B100948961 /* FXKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXKeychain.m; sourceTree = "<group>"; };
+		F18DC1BF1CC9B0B100948961 /* LICENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENCE.md; sourceTree = "<group>"; };
+		F18DC1C21CC9B0CF00948961 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F18DC1C31CC9B0CF00948961 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		F18DC1C41CC9B0CF00948961 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F18DC1C51CC9B0CF00948961 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F18DC1C81CC9B0EC00948961 /* DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatter.h; sourceTree = "<group>"; };
+		F18DC1C91CC9B0EC00948961 /* DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatter.m; sourceTree = "<group>"; };
+		F18DC1CA1CC9B0EC00948961 /* NSString+NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringAdditions.h"; sourceTree = "<group>"; };
+		F18DC1CB1CC9B0EC00948961 /* NSString+NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringAdditions.m"; sourceTree = "<group>"; };
+		F18DC1CE1CC9B16300948961 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,6 +433,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F18DC1CF1CC9B16300948961 /* Security.framework in Frameworks */,
 				E7BBE8F61C0CA7B400C78554 /* CoreData.framework in Frameworks */,
 				5C21CDC015A3B22E0089E908 /* CFNetwork.framework in Frameworks */,
 				5C21CDC115A3B22E0089E908 /* CoreLocation.framework in Frameworks */,
@@ -446,6 +476,7 @@
 		5C21CD9215A3B0AA0089E908 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F18DC1CE1CC9B16300948961 /* Security.framework */,
 				E7D29D891C206EC600FD58F6 /* MapKit.framework */,
 				E7BBE8F51C0CA7B400C78554 /* CoreData.framework */,
 				5C21CDB715A3B22E0089E908 /* CFNetwork.framework */,
@@ -467,7 +498,6 @@
 		E76B3C051CC53AE8004F7490 /* HelloPanoramaGL */ = {
 			isa = PBXGroup;
 			children = (
-				E76B3D511CC53B82004F7490 /* Supporting Files */,
 				E76B3C061CC53AE8004F7490 /* AppDelegate.h */,
 				E76B3C071CC53AE8004F7490 /* AppDelegate.m */,
 				E76B3C081CC53AE8004F7490 /* Categories */,
@@ -476,6 +506,8 @@
 				E76B3CB51CC53AE9004F7490 /* Model */,
 				E76B3CD71CC53AE9004F7490 /* Resources */,
 				E76B3CE71CC53AE9004F7490 /* Service */,
+				E76B3D511CC53B82004F7490 /* Supporting Files */,
+				F18DC1AF1CC9B08700948961 /* Thirdparty */,
 			);
 			path = HelloPanoramaGL;
 			sourceTree = "<group>";
@@ -483,6 +515,10 @@
 		E76B3C081CC53AE8004F7490 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F18DC1C81CC9B0EC00948961 /* DateFormatter.h */,
+				F18DC1C91CC9B0EC00948961 /* DateFormatter.m */,
+				F18DC1CA1CC9B0EC00948961 /* NSString+NSStringAdditions.h */,
+				F18DC1CB1CC9B0EC00948961 /* NSString+NSStringAdditions.m */,
 				E76B3D541CC53CE9004F7490 /* TPKeyboardAvoiding */,
 				E76B3C091CC53AE8004F7490 /* UIView+CornerRadius.h */,
 				E76B3C0A1CC53AE8004F7490 /* UIView+CornerRadius.m */,
@@ -493,6 +529,7 @@
 		E76B3C0D1CC53AE8004F7490 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				F18DC1A91CC9B07600948961 /* EditUserController */,
 				E7AD815D1CC97B360096F1B3 /* SettingsController */,
 				E7AD81571CC979C00096F1B3 /* ProfileController */,
 				E76B3D611CC541FC004F7490 /* MapController */,
@@ -631,6 +668,7 @@
 		E76B3C391CC53AE9004F7490 /* UIControl */ = {
 			isa = PBXGroup;
 			children = (
+				F18DC1A31CC9B05000948961 /* LimitedTFController */,
 				E76B3C3A1CC53AE9004F7490 /* MBProgressHUD */,
 				E76B3C3D1CC53AE9004F7490 /* RegionAnnotation */,
 			);
@@ -807,6 +845,10 @@
 		E76B3CB51CC53AE9004F7490 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F18DC1C21CC9B0CF00948961 /* User.h */,
+				F18DC1C31CC9B0CF00948961 /* User.m */,
+				F18DC1C41CC9B0CF00948961 /* User+CoreDataProperties.h */,
+				F18DC1C51CC9B0CF00948961 /* User+CoreDataProperties.m */,
 				E76B3CB61CC53AE9004F7490 /* Hotspot+CoreDataProperties.h */,
 				E76B3CB71CC53AE9004F7490 /* Hotspot+CoreDataProperties.m */,
 				E76B3CB81CC53AE9004F7490 /* Hotspot.h */,
@@ -952,6 +994,44 @@
 			path = SettingsController/SettingsCell;
 			sourceTree = "<group>";
 		};
+		F18DC1A31CC9B05000948961 /* LimitedTFController */ = {
+			isa = PBXGroup;
+			children = (
+				F18DC1A41CC9B05000948961 /* BZLimitedTFController.h */,
+				F18DC1A51CC9B05000948961 /* BZLimitedTFController.m */,
+				F18DC1A61CC9B05000948961 /* BZLimitedTFController.xib */,
+			);
+			path = LimitedTFController;
+			sourceTree = "<group>";
+		};
+		F18DC1A91CC9B07600948961 /* EditUserController */ = {
+			isa = PBXGroup;
+			children = (
+				F18DC1AA1CC9B07600948961 /* PREditUserController.h */,
+				F18DC1AB1CC9B07600948961 /* PREditUserController.m */,
+				F18DC1AC1CC9B07600948961 /* PREditUserController.xib */,
+			);
+			path = EditUserController;
+			sourceTree = "<group>";
+		};
+		F18DC1AF1CC9B08700948961 /* Thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				F18DC1BC1CC9B0B100948961 /* FXKeychain */,
+			);
+			path = Thirdparty;
+			sourceTree = "<group>";
+		};
+		F18DC1BC1CC9B0B100948961 /* FXKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				F18DC1BD1CC9B0B100948961 /* FXKeychain.h */,
+				F18DC1BE1CC9B0B100948961 /* FXKeychain.m */,
+				F18DC1BF1CC9B0B100948961 /* LICENCE.md */,
+			);
+			path = FXKeychain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1027,6 +1107,7 @@
 				E7AD816A1CC997810096F1B3 /* settingsIcon@2x.png in Resources */,
 				E76B3D061CC53AE9004F7490 /* CHANGES.txt in Resources */,
 				E76B3D401CC53AE9004F7490 /* 1.jpg in Resources */,
+				F18DC1AE1CC9B07600948961 /* PREditUserController.xib in Resources */,
 				E7AD81701CC998290096F1B3 /* SettingsCell.xib in Resources */,
 				E76B3D2B1CC53AE9004F7490 /* README.txt in Resources */,
 				E7AD81681CC98C060096F1B3 /* infoIcon@2x.png in Resources */,
@@ -1047,6 +1128,7 @@
 				E76B3D4D1CC53AE9004F7490 /* pinRed.png in Resources */,
 				E76B3D721CC54F54004F7490 /* mainBkg.png in Resources */,
 				5C21CE6C15A3D5E40089E908 /* icon.png in Resources */,
+				F18DC1A81CC9B05000948961 /* BZLimitedTFController.xib in Resources */,
 				E76B3CF61CC53AE9004F7490 /* PRSceneController.xib in Resources */,
 				E76B3D481CC53AE9004F7490 /* 3_preview.jpg in Resources */,
 				E76B3D6F1CC54DB4004F7490 /* toursIcon@2x.png in Resources */,
@@ -1076,7 +1158,9 @@
 				E76B3D1C1CC53AE9004F7490 /* PLRenderer.m in Sources */,
 				E76B3D301CC53AE9004F7490 /* Hotspot+CoreDataProperties.m in Sources */,
 				E76B3D0B1CC53AE9004F7490 /* glues_registry.c in Sources */,
+				F18DC1CC1CC9B0EC00948961 /* DateFormatter.m in Sources */,
 				E76B3D311CC53AE9004F7490 /* Hotspot.m in Sources */,
+				F18DC1C11CC9B0B100948961 /* LICENCE.md in Sources */,
 				E76B3D291CC53AE9004F7490 /* PLView.m in Sources */,
 				E76B3D501CC53AE9004F7490 /* PRService.m in Sources */,
 				E76B3CF91CC53AE9004F7490 /* PRSceneCell.m in Sources */,
@@ -1084,7 +1168,9 @@
 				E76B3D281CC53AE9004F7490 /* PLVector3.m in Sources */,
 				E76B3CFD1CC53AE9004F7490 /* PhotoCollectionViewLayout.m in Sources */,
 				E76B3CF51CC53AE9004F7490 /* PRSceneController.m in Sources */,
+				F18DC1CD1CC9B0EC00948961 /* NSString+NSStringAdditions.m in Sources */,
 				E76B3D3D1CC53AE9004F7490 /* TransitionHotspot+CoreDataProperties.m in Sources */,
+				F18DC1C01CC9B0B100948961 /* FXKeychain.m in Sources */,
 				E76B3D211CC53AE9004F7490 /* PLSphericalPanorama.m in Sources */,
 				E76B3D071CC53AE9004F7490 /* glues_error.c in Sources */,
 				E76B3D0F1CC53AE9004F7490 /* PLCubicPanorama.m in Sources */,
@@ -1096,6 +1182,7 @@
 				E76B3D0E1CC53AE9004F7490 /* PLCamera.m in Sources */,
 				E76B3D091CC53AE9004F7490 /* glues_project.c in Sources */,
 				E76B3D031CC53AE9004F7490 /* BubbleAnnotationView.m in Sources */,
+				F18DC1A71CC9B05000948961 /* BZLimitedTFController.m in Sources */,
 				E76B3D371CC53AE9004F7490 /* Location.m in Sources */,
 				E76B3D241CC53AE9004F7490 /* PLTransitionFadeBase.m in Sources */,
 				E76B3D2F1CC53AE9004F7490 /* main.m in Sources */,
@@ -1120,7 +1207,9 @@
 				E76B3D2C1CC53AE9004F7490 /* ALView+PureLayout.m in Sources */,
 				E76B3CF01CC53AE9004F7490 /* PRInfoController.m in Sources */,
 				E76B3D261CC53AE9004F7490 /* PLTransitionFadeOut.m in Sources */,
+				F18DC1C71CC9B0CF00948961 /* User+CoreDataProperties.m in Sources */,
 				E76B3D251CC53AE9004F7490 /* PLTransitionFadeIn.m in Sources */,
+				F18DC1C61CC9B0CF00948961 /* User.m in Sources */,
 				E76B3CFB1CC53AE9004F7490 /* PRTourController.m in Sources */,
 				E76B3D5F1CC53CE9004F7490 /* TPKeyboardAvoidingTableView.m in Sources */,
 				E76B3D1E1CC53AE9004F7490 /* PLSceneElement.m in Sources */,
@@ -1132,6 +1221,7 @@
 				E76B3D341CC53AE9004F7490 /* InfoHotspot+CoreDataProperties.m in Sources */,
 				E76B3D101CC53AE9004F7490 /* PLCylindricalPanorama.m in Sources */,
 				E76B3D2A1CC53AE9004F7490 /* PLViewBase.m in Sources */,
+				F18DC1AD1CC9B07600948961 /* PREditUserController.m in Sources */,
 				E76B3D041CC53AE9004F7490 /* RegionAnnotation.m in Sources */,
 				E76B3D231CC53AE9004F7490 /* PLTransition.m in Sources */,
 				E76B3CF21CC53AE9004F7490 /* LoginViewController.m in Sources */,

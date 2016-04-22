@@ -40,8 +40,12 @@
 
 #pragma mark - Actions
 - (IBAction)tapOnSignInButton:(UIButton *)sender {
-  //  NSString *password = self.passwordTF.text;
-  //  NSString *email = self.emailTF.text;
+  NSString *password = self.passwordTF.text;
+  NSString *email = self.emailTF.text;
+
+  if (self.didLoginBlock != nil) {
+    self.didLoginBlock(email, password);
+  }
 
   [self.emailTF resignFirstResponder];
   [self.passwordTF resignFirstResponder];
