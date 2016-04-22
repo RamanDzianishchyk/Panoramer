@@ -15,6 +15,7 @@
                 <outlet property="cityContainer" destination="Eac-XX-bha" id="Cj1-tU-PAh"/>
                 <outlet property="doneButton" destination="RmT-jJ-uRk" id="CtO-AJ-16i"/>
                 <outlet property="firstNameContainer" destination="54k-bz-uTd" id="qld-3d-ulF"/>
+                <outlet property="lockerView" destination="2ac-1Y-gXQ" id="TwK-E5-3Xs"/>
                 <outlet property="nicknameContiainer" destination="g2J-Mw-X5t" id="cdr-iz-vwA"/>
                 <outlet property="passwordContainer" destination="zLc-vR-Q8f" id="dVm-ZP-SHA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -166,13 +167,34 @@
                         <constraint firstItem="OkB-w7-HZ4" firstAttribute="top" secondItem="MfS-cu-l0z" secondAttribute="top" id="tRa-zG-dqV"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ac-1Y-gXQ" userLabel="locker">
+                    <rect key="frame" x="0.0" y="64" width="320" height="545"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для доступа к профилю вы должны зарегистрироваться или войти под своей учетной записью." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJi-LO-cXz">
+                            <rect key="frame" x="20" y="242" width="280" height="61"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="eJi-LO-cXz" firstAttribute="centerX" secondItem="2ac-1Y-gXQ" secondAttribute="centerX" id="BWv-HK-Gvd"/>
+                        <constraint firstItem="eJi-LO-cXz" firstAttribute="leading" secondItem="2ac-1Y-gXQ" secondAttribute="leading" constant="20" id="Bqe-K3-Zh3"/>
+                        <constraint firstAttribute="trailing" secondItem="eJi-LO-cXz" secondAttribute="trailing" constant="20" id="MBQ-c6-dgg"/>
+                        <constraint firstItem="eJi-LO-cXz" firstAttribute="centerY" secondItem="2ac-1Y-gXQ" secondAttribute="centerY" id="UaX-t0-5hn"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="MfS-cu-l0z" secondAttribute="trailing" id="0s8-gV-Zlp"/>
+                <constraint firstItem="2ac-1Y-gXQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AXY-VH-Fmg"/>
                 <constraint firstAttribute="trailing" secondItem="GTU-fZ-6OV" secondAttribute="trailing" id="CH6-d8-DPE"/>
                 <constraint firstItem="GTU-fZ-6OV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Ciu-Zp-GWE"/>
                 <constraint firstItem="GTU-fZ-6OV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HjR-nu-HrK"/>
+                <constraint firstAttribute="trailing" secondItem="2ac-1Y-gXQ" secondAttribute="trailing" id="Hvr-Hp-HzC"/>
+                <constraint firstItem="2ac-1Y-gXQ" firstAttribute="top" secondItem="GTU-fZ-6OV" secondAttribute="top" id="M4Q-WM-yk6"/>
+                <constraint firstAttribute="bottom" secondItem="2ac-1Y-gXQ" secondAttribute="bottom" constant="50" id="XJd-CG-PZV"/>
                 <constraint firstItem="MfS-cu-l0z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fAL-F2-l6O"/>
                 <constraint firstAttribute="bottom" secondItem="MfS-cu-l0z" secondAttribute="bottom" constant="58" id="qJ1-6C-b9F"/>
                 <constraint firstItem="MfS-cu-l0z" firstAttribute="top" secondItem="GTU-fZ-6OV" secondAttribute="bottom" id="wh6-9T-Dz6"/>
@@ -183,6 +205,6 @@
     </objects>
     <resources>
         <image name="avatarBkg.jpg" width="284" height="177"/>
-        <image name="noAvatarImage.png" width="256" height="256"/>
+        <image name="noAvatarImage.png" width="512" height="512"/>
     </resources>
 </document>

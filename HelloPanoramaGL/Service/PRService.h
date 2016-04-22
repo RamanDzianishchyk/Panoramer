@@ -6,7 +6,11 @@
 //  Copyright © 2015 GRSU. All rights reserved.
 //
 
+@class User;
+
 @interface PRService : NSObject
+
+@property(nonatomic, strong) User *currentUser;
 
 + (PRService *)sharedService;
 

@@ -12,6 +12,4 @@
 
 @interface PREditUserController : ATMenuBaseController
 
-- (void)configureForUser:(User *)user;
-
 @end

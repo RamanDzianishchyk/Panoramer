@@ -6,10 +6,11 @@
 //  Copyright © 2015 GRSU. All rights reserved.
 //
 
-#import "Tour.h"
-#import "Image.h"
 #import "Hotspot.h"
-#import "Scene.h"
-#import "Location.h"
+#import "Image.h"
 #import "InfoHotspot.h"
+#import "Location.h"
+#import "Scene.h"
+#import "Tour.h"
 #import "TransitionHotspot.h"
+#import "User.h"

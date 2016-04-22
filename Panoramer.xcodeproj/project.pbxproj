@@ -143,6 +143,8 @@
 		E7AD81721CC99AF50096F1B3 /* BlackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81711CC99AF50096F1B3 /* BlackArrow@2x.png */; };
 		E7BBE8F61C0CA7B400C78554 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BBE8F51C0CA7B400C78554 /* CoreData.framework */; };
 		E7D29D8A1C206EC600FD58F6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D29D891C206EC600FD58F6 /* MapKit.framework */; };
+		F17337B81CC9FEDC002134D0 /* avatarBkg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F17337B61CC9FEDC002134D0 /* avatarBkg.jpg */; };
+		F17337B91CC9FEDC002134D0 /* noAvatarImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F17337B71CC9FEDC002134D0 /* noAvatarImage.png */; };
 		F18DC1A71CC9B05000948961 /* BZLimitedTFController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1A51CC9B05000948961 /* BZLimitedTFController.m */; };
 		F18DC1A81CC9B05000948961 /* BZLimitedTFController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18DC1A61CC9B05000948961 /* BZLimitedTFController.xib */; };
 		F18DC1AD1CC9B07600948961 /* PREditUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1AB1CC9B07600948961 /* PREditUserController.m */; };
@@ -154,8 +156,6 @@
 		F18DC1CC1CC9B0EC00948961 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1C91CC9B0EC00948961 /* DateFormatter.m */; };
 		F18DC1CD1CC9B0EC00948961 /* NSString+NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1CB1CC9B0EC00948961 /* NSString+NSStringAdditions.m */; };
 		F18DC1CF1CC9B16300948961 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18DC1CE1CC9B16300948961 /* Security.framework */; };
-		F18DC1D11CC9B3C900948961 /* noAvatarImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F18DC1D01CC9B3C900948961 /* noAvatarImage.png */; };
-		F18DC1D31CC9B4F200948961 /* avatarBkg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F18DC1D21CC9B4F200948961 /* avatarBkg.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -405,6 +405,8 @@
 		E7AD81711CC99AF50096F1B3 /* BlackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlackArrow@2x.png"; sourceTree = "<group>"; };
 		E7BBE8F51C0CA7B400C78554 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E7D29D891C206EC600FD58F6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F17337B61CC9FEDC002134D0 /* avatarBkg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatarBkg.jpg; sourceTree = "<group>"; };
+		F17337B71CC9FEDC002134D0 /* noAvatarImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noAvatarImage.png; sourceTree = "<group>"; };
 		F18DC1A41CC9B05000948961 /* BZLimitedTFController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZLimitedTFController.h; sourceTree = "<group>"; };
 		F18DC1A51CC9B05000948961 /* BZLimitedTFController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZLimitedTFController.m; sourceTree = "<group>"; };
 		F18DC1A61CC9B05000948961 /* BZLimitedTFController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BZLimitedTFController.xib; sourceTree = "<group>"; };
@@ -423,8 +425,6 @@
 		F18DC1CA1CC9B0EC00948961 /* NSString+NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringAdditions.h"; sourceTree = "<group>"; };
 		F18DC1CB1CC9B0EC00948961 /* NSString+NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringAdditions.m"; sourceTree = "<group>"; };
 		F18DC1CE1CC9B16300948961 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F18DC1D01CC9B3C900948961 /* noAvatarImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noAvatarImage.png; path = ../../../../Desktop/noAvatarImage.png; sourceTree = "<group>"; };
-		F18DC1D21CC9B4F200948961 /* avatarBkg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = avatarBkg.jpg; path = ../../../../Desktop/avatarBkg.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -884,8 +884,8 @@
 		E76B3CD71CC53AE9004F7490 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F18DC1D21CC9B4F200948961 /* avatarBkg.jpg */,
-				F18DC1D01CC9B3C900948961 /* noAvatarImage.png */,
+				F17337B61CC9FEDC002134D0 /* avatarBkg.jpg */,
+				F17337B71CC9FEDC002134D0 /* noAvatarImage.png */,
 				E7AD81711CC99AF50096F1B3 /* BlackArrow@2x.png */,
 				E7AD81691CC997810096F1B3 /* settingsIcon@2x.png */,
 				E7AD81671CC98C060096F1B3 /* infoIcon@2x.png */,
@@ -1087,7 +1087,7 @@
 			files = (
 				E7AD81621CC97BCA0096F1B3 /* PRSettingsController.xib in Resources */,
 				E76B3D661CC54231004F7490 /* MapController.xib in Resources */,
-				F18DC1D11CC9B3C900948961 /* noAvatarImage.png in Resources */,
+				F17337B91CC9FEDC002134D0 /* noAvatarImage.png in Resources */,
 				E76B3D451CC53AE9004F7490 /* 2.jpg in Resources */,
 				E76B3CFC1CC53AE9004F7490 /* PRTourController.xib in Resources */,
 				E76B3D441CC53AE9004F7490 /* 1_preview.jpg in Resources */,
@@ -1100,7 +1100,6 @@
 				E76B3D401CC53AE9004F7490 /* 1.jpg in Resources */,
 				F18DC1AE1CC9B07600948961 /* PREditUserController.xib in Resources */,
 				E7AD81701CC998290096F1B3 /* SettingsCell.xib in Resources */,
-				F18DC1D31CC9B4F200948961 /* avatarBkg.jpg in Resources */,
 				E76B3D2B1CC53AE9004F7490 /* README.txt in Resources */,
 				E7AD81681CC98C060096F1B3 /* infoIcon@2x.png in Resources */,
 				E76B3CF31CC53AE9004F7490 /* LoginViewController.xib in Resources */,
@@ -1126,6 +1125,7 @@
 				E76B3CFF1CC53AE9004F7490 /* PRToursController.xib in Resources */,
 				E76B3CEE1CC53AE9004F7490 /* InfoPlist.strings in Resources */,
 				E76B3D701CC54DB4004F7490 /* mapIcon@2x.png in Resources */,
+				F17337B81CC9FEDC002134D0 /* avatarBkg.jpg in Resources */,
 				E76B3D3F1CC53AE9004F7490 /* Panoramer-Info.plist in Resources */,
 				5C21CE7015A3D6B10089E908 /* icon_retina.png in Resources */,
 				E76B3CF81CC53AE9004F7490 /* TopBar.xib in Resources */,
