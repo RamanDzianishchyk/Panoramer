@@ -957,7 +957,7 @@
   UITabBarController *tabBarController = [[UITabBarController alloc] init];
   [tabBarController.tabBar setBarTintColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
 
-  [UITabBarItem.appearance setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor lightGrayColor] } forState:UIControlStateNormal];
+  [UITabBarItem.appearance setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor grayColor] } forState:UIControlStateNormal];
   [UITabBarItem.appearance setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor] } forState:UIControlStateSelected];
   [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
 

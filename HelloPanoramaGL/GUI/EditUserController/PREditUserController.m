@@ -73,6 +73,17 @@
   }
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  if (self.view.alpha == 0) {
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:0.5
+                     animations:^{
+                       [weakSelf.view setAlpha:1.0];
+                     }];
+  }
+}
+
 #pragma mark - Actions
 - (IBAction)onAvatarBtnTap:(id)sender {
   [[[UIActionSheet alloc] initWithTitle:@"Использовать:"
@@ -92,22 +103,28 @@
   self.user.city = self.cityController.text;
   [self.user.managedObjectContext save:nil];
   [self.view endEditing:YES];
-  [[[UIAlertView alloc] initWithTitle:@"Успех" message:@"Изменения вашего профиля сохранены" delegate:nil
-                    cancelButtonTitle:@"Хорошо"
-                    otherButtonTitles:nil] show];
+  [[[UIAlertView alloc] initWithTitle:nil message:@"Изменения сохранены" delegate:nil cancelButtonTitle:@"Ок" otherButtonTitles:nil] show];
 }
 
 - (void)onSettingsBtnTap {
   PRSettingsController *vc = [PRSettingsController new];
   __weak typeof(self) weakSelf = self;
-  vc.completion = ^{
-    [weakSelf.tabBarController.tabBar setAlpha:1.0];
-  };
-  [UIView animateWithDuration:0.5
-                   animations:^{
-                     [weakSelf.tabBarController.tabBar setAlpha:0.0];
-                   }];
-  [self.navigationController pushViewController:vc animated:YES];
+  [UIView animateWithDuration:0.1
+      animations:^{
+        [weakSelf.view setAlpha:0.0];
+      }
+      completion:^(BOOL finished) {
+        if (finished) {
+          vc.completion = ^{
+            [weakSelf.tabBarController.tabBar setAlpha:1.0];
+          };
+          [UIView animateWithDuration:0.5
+                           animations:^{
+                             [weakSelf.tabBarController.tabBar setAlpha:0.0];
+                           }];
+          [weakSelf.navigationController pushViewController:vc animated:YES];
+        }
+      }];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

@@ -42,16 +42,7 @@ typedef NS_ENUM(NSUInteger, SettingCellType) {
   self.title = @"Настройки";
 
   [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SettingsCell class]) bundle:[NSBundle mainBundle]]
-       forCellReuseIdentifier:kPRSettingsCellId];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-  if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-    if (self.completion != nil) {
-      self.completion();
-    }
-  }
-  [super viewWillDisappear:animated];
+       forCellReuseIdentifier:NSStringFromClass([SettingsCell class])];
 }
 
 #pragma mark - UITableView delegate/datasource
@@ -68,7 +59,7 @@ typedef NS_ENUM(NSUInteger, SettingCellType) {
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  SettingsCell *cell = [tableView dequeueReusableCellWithIdentifier:kPRSettingsCellId];
+  SettingsCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SettingsCell class]) forIndexPath:indexPath];
   [cell.mainLabel setTextColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
   __weak typeof(self) weakSelf = self;
   switch (indexPath.row) {
@@ -118,7 +109,7 @@ typedef NS_ENUM(NSUInteger, SettingCellType) {
                                      delegate:self
                             cancelButtonTitle:@"Отмена"
                        destructiveButtonTitle:@"Нет"
-                            otherButtonTitles:@"Да", nil] showInView:self.view];
+                            otherButtonTitles:@"Да", nil] showInView:weakSelf.view];
       };
       break;
     }

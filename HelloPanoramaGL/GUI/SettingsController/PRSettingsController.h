@@ -10,6 +10,4 @@
 
 @interface PRSettingsController : ATMenuBaseController
 
-@property(nonatomic, copy) void( (^completion)(void));
-
 @end
