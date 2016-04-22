@@ -25,6 +25,7 @@
   [super awakeFromNib];
   [self setBackgroundColor:[UIColor clearColor]];
   [self.contentView setBackgroundColor:[UIColor clearColor]];
+  [self.mainTitle setBackgroundColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
 }
 
 #pragma mark - Public Interface
@@ -36,8 +37,13 @@
 }
 
 - (void)roundCell {
+  [self layoutIfNeeded];
   [self.baseContainer setCornersRadius:5 withBorderWidth:0 withBorderColor:nil];
-  [self.previewContainer setCorner:(UIRectCornerTopLeft | UIRectCornerBottomLeft)radius:5 withBorderWidth:1 withBorderColor:[UIColor whiteColor]];
+  [self.previewContainer setCorner:(UIRectCornerTopLeft | UIRectCornerBottomLeft) radius:5 withBorderWidth:1 withBorderColor:[UIColor clearColor]];
+  [self.mainTitle setCorner:(UIRectCornerTopRight | UIRectCornerBottomRight)
+                     radius:5
+            withBorderWidth:1
+            withBorderColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
 }
 
 #pragma mark - Private Interface

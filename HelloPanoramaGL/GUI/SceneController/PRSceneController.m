@@ -6,16 +6,16 @@
 //  Copyright © 2015 GRSU. All rights reserved.
 //
 
-#import "PRSceneController.h"
-#import "PLView.h"
 #import "ATMenuBaseController+Protected.h"
-#import "Scene.h"
-#import "Image.h"
 #import "Hotspot.h"
-#import "TransitionHotspot.h"
+#import "Image.h"
 #import "InfoHotspot.h"
-#import "PRService.h"
+#import "PLView.h"
 #import "PRInfoController.h"
+#import "PRSceneController.h"
+#import "PRService.h"
+#import "Scene.h"
+#import "TransitionHotspot.h"
 
 @interface PRSceneController ()<PLViewDelegate>
 
@@ -55,24 +55,23 @@
     [UIView animateWithDuration:0.2
                      animations:^{
                        [weakSelf.infoContainer setAlpha:0.0];
-                       [weakSelf setTopBarColor:[UIColor whiteColor]];
+                       [weakSelf setTopBarColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
                      }];
     [weakSelf.sceneView setUserInteractionEnabled:YES];
     [weakSelf.infoContainer setUserInteractionEnabled:NO];
   };
 
   [[self leftTopButton] setHidden:NO];
-  [[self leftTopButton] setTitle:@"<" forState:UIControlStateNormal];
-  [[self leftTopButton] setTitleColor:UIColorFromHexRGB(kPRMainThemeColor, 1) forState:UIControlStateNormal];
+  [[self leftTopButton] setTitle:@"Назад" forState:UIControlStateNormal];
+  [[self leftTopButton] setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
   [self setOnLeftTopButtonTapBlock:^{
     weakSelf.sceneView.delegate = nil;
     [weakSelf dismissViewControllerAnimated:YES completion:nil];
   }];
-  [self setTopBarTitleColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
+  [self setTopBarColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
+  [self setTopBarTitleColor:[UIColor whiteColor]];
   [self setTopBarTitle:self.scene.title];
-  [self setTopBarBottomBorderColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
-
   [self setUpPanoramaWithSceneId:self.scene.idProp];
 }
 

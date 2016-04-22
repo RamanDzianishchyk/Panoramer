@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ft4-wB-z7K" customClass="PLView">
-                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0q-lJ-ERI">
@@ -39,7 +39,7 @@
                 <constraint firstItem="h0q-lJ-ERI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eSi-Wa-adU"/>
                 <constraint firstItem="h0q-lJ-ERI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="32" id="gQ8-CI-SRQ"/>
                 <constraint firstItem="ft4-wB-z7K" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pCD-xW-mvr"/>
-                <constraint firstItem="ft4-wB-z7K" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="svo-Ty-x2v"/>
+                <constraint firstItem="ft4-wB-z7K" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="svo-Ty-x2v"/>
                 <constraint firstAttribute="trailing" secondItem="ft4-wB-z7K" secondAttribute="trailing" id="tjh-Og-O8I"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

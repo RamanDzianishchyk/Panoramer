@@ -30,6 +30,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.title = @"Карта";
   self.locationManager = [[CLLocationManager alloc] init];
   self.locationManager.delegate = self;
   self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -66,21 +67,22 @@
   if ([annotation conformsToProtocol:@protocol(RegionAnnotationProtocol)]) {
     BubbleAnnotationView *view = (BubbleAnnotationView *)[((NSObject<RegionAnnotationProtocol> *)annotation) annotationViewInMap:mapView];
 
-    UIButton *tourStartButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [tourStartButton setFrame:CGRectMake(0, 0, 30, 30)];
-    [tourStartButton setCornersRadius:tourStartButton.frame.size.height / 2 withBorderWidth:1 withBorderColor:UIColorFromHexRGB(kPRMainThemeColor, 1)];
-    [tourStartButton setContentMode:UIViewContentModeScaleAspectFit];
-    [tourStartButton setImage:[UIImage imageNamed:@"playButton.png"] forState:UIControlStateNormal];
-    [view setLeftActionButton:tourStartButton];
-    __weak typeof(self) weakSelf = self;
-    view.theAnnotation.leftButtonActionBlock = ^{
-      Tour *tour =
-          [weakSelf.tours filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"idProp == %@", ((RegionAnnotation *)annotation).tourId]].firstObject;
-      if (tour != nil) {
-        PRTourController *vc = [[PRTourController alloc] initWithTour:tour];
-        [self presentViewController:vc animated:YES completion:nil];
-      }
-    };
+    //    UIButton *tourStartButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    //    [tourStartButton setFrame:CGRectMake(0, 0, 30, 30)];
+    //    [tourStartButton setCornersRadius:tourStartButton.frame.size.height / 2 withBorderWidth:1 withBorderColor:UIColorFromHexRGB(kPRMainThemeColor, 1)];
+    //    [tourStartButton setContentMode:UIViewContentModeScaleAspectFit];
+    //    [tourStartButton setImage:[UIImage imageNamed:@"playButton.png"] forState:UIControlStateNormal];
+    //    [view setLeftActionButton:tourStartButton];
+    //    __weak typeof(self) weakSelf = self;
+    //    view.theAnnotation.leftButtonActionBlock = ^{
+    //      Tour *tour =
+    //          [weakSelf.tours filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"idProp == %@", ((RegionAnnotation
+    //          *)annotation).tourId]].firstObject;
+    //      if (tour != nil) {
+    //        PRTourController *vc = [[PRTourController alloc] initWithTour:tour];
+    //        [self presentViewController:vc animated:YES completion:nil];
+    //      }
+    //    };
 
     [view updateWithAnnotation:(RegionAnnotation *)annotation];
     return view;

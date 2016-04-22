@@ -31,21 +31,32 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.title = @"Туры";
 
-  [self.collectionView setBackgroundColor:UIColorFromHexRGB(kPRMainThemeColor, 1)];
   [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([PRTourCell class]) bundle:[NSBundle mainBundle]]
         forCellWithReuseIdentifier:kPRPhotoCellIdentifier];
-  [self setTopBarBottomBorderColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
   self.collectionViewLayout = [[PhotoCollectionViewLayout alloc] initWithNumberOfColumns:2 verticalSapcing:30 titleHeight:0];
   [self.collectionView setCollectionViewLayout:self.collectionViewLayout];
   self.tours = [[PRService sharedService] fetchObjectsWithEntityName:NSStringFromClass([Tour class])
                                                            predicate:nil
                                                   andSortDescriptors:@[ [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES] ]];
+  [self.collectionView setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   [self.collectionView reloadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  if (self.collectionView.alpha == 0) {
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:0.5
+                     animations:^{
+                       [weakSelf.collectionView setAlpha:1.0];
+                     }];
+  }
 }
 
 #pragma mark - UiCollectionViewDelegate/Datasource
@@ -61,7 +72,7 @@
   Tour *tour = [self.tours objectAtIndex:indexPath.section];
   PRTourCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kPRPhotoCellIdentifier forIndexPath:indexPath];
   [cell setImage:[UIImage imageNamed:tour.preview.path]];
-  [cell.titleLabel setTextColor:UIColorFromHexRGB(kPRMainThemeColor, 1)];
+  [cell.titleLabel setTextColor:[UIColor whiteColor]];
   [cell.titleLabel setText:tour.title];
   return cell;
 }
@@ -73,7 +84,23 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
   Tour *tour = [self.tours objectAtIndex:indexPath.section];
   PRTourController *vc = [[PRTourController alloc] initWithTour:tour];
-  [self presentViewController:vc animated:YES completion:nil];
+  __weak typeof(self) weakSelf = self;
+  [UIView animateWithDuration:0.1
+      animations:^{
+        [weakSelf.collectionView setAlpha:0.0];
+      }
+      completion:^(BOOL finished) {
+        if (finished) {
+          vc.completion = ^{
+            [weakSelf.tabBarController.tabBar setAlpha:1.0];
+          };
+          [UIView animateWithDuration:0.5
+                           animations:^{
+                             [weakSelf.tabBarController.tabBar setAlpha:0.0];
+                           }];
+          [self.navigationController pushViewController:vc animated:YES];
+        }
+      }];
 }
 
 @end

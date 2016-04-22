@@ -6,32 +6,39 @@
 //  Copyright © 2016 GRSU. All rights reserved.
 //
 
+#import "ATMenuBaseController+Protected.h"
 #import "PRProfileController.h"
+#import "PRSettingsController.h"
 
 @interface PRProfileController ()
+
+- (void)onSettingsBtnTap;
 
 @end
 
 @implementation PRProfileController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+  [super viewDidLoad];
+  self.title = @"Профиль";
+
+  UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsBtnTap)];
+  [anotherButton setImage:[UIImage imageNamed:@"settingsIcon.png"]];
+  self.navigationItem.rightBarButtonItem = anotherButton;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Actions
+- (void)onSettingsBtnTap {
+  PRSettingsController *vc = [PRSettingsController new];
+  __weak typeof(self) weakSelf = self;
+  vc.completion = ^{
+    [weakSelf.tabBarController.tabBar setAlpha:1.0];
+  };
+  [UIView animateWithDuration:0.5
+                   animations:^{
+                     [weakSelf.tabBarController.tabBar setAlpha:0.0];
+                   }];
+  [self.navigationController pushViewController:vc animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

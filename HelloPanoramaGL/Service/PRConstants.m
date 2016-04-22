@@ -12,7 +12,7 @@
 NSInteger const kPRTopBarHeight = 64;
 
 #pragma mark - Colors
-NSUInteger const kPRMainThemeColor = 0x0396D7;
+NSUInteger const kPRMainThemeColor = 0x40B14E;
 
 #pragma mark - Collection View Layout
 CGFloat const kPRHorizontalSpacingInterItems = 8;

@@ -221,7 +221,7 @@ static NSInteger const kLTMaxTitleLabelLinesCount = 3;
   self.titleLabel = [[UILabel alloc] init];
   [self.titleLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
   [self.titleLabel setTextAlignment:NSTextAlignmentCenter];
-  self.titleLabel.textColor = [UIColor darkTextColor];
+  self.titleLabel.textColor = [UIColor whiteColor];
   self.titleLabel.font = [UIFont boldSystemFontOfSize:17];
   self.titleLabel.adjustsFontSizeToFitWidth = YES;
   self.titleLabel.minimumScaleFactor = 0.5f;
@@ -328,7 +328,7 @@ static NSInteger const kLTMaxTitleLabelLinesCount = 3;
   CGPathRef path = [self newBubbleWithRect:self.bounds];
   self.bgLayer.path = path;
   CFRelease(path);
-  self.bgLayer.fillColor = [UIColor colorWithWhite:1 alpha:0.95].CGColor;
+  self.bgLayer.fillColor = UIColorFromHexRGB(kPRMainThemeColor, 1.0).CGColor;
 
   self.bgLayer.shadowColor = [UIColor blackColor].CGColor;
   self.bgLayer.shadowOffset = CGSizeMake(0.0f, 3.0f);
@@ -356,7 +356,8 @@ static NSInteger const kLTMaxTitleLabelLinesCount = 3;
                                              options:NSStringDrawingUsesLineFragmentOrigin
                                           attributes:@{
                                             NSFontAttributeName : font
-                                          } context:nil]
+                                          }
+                                             context:nil]
                          .size;
 
   return CGSizeMake(ceil(titleSize.width + size.width), 1.5 * ceil(titleSize.height));
