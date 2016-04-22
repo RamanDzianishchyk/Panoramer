@@ -28,6 +28,8 @@ extern NSInteger const kPRTopBarHeight;
 
 #pragma mark - Colors
 extern NSUInteger const kPRMainThemeColor;
+extern NSUInteger const kPRPlaceholderColor;
+extern NSUInteger const kPRTextColor;
 
 #pragma mark - Collection View Layout
 extern CGFloat const kPRHorizontalSpacingInterItems;
@@ -46,3 +48,13 @@ extern NSString *const kLMRequestedUserAuthorizationKey;
 
 #pragma mark - Map
 extern NSString *const kPRTilesTemplate;
+
+#pragma mark - Settings -> About
+extern NSString *const kPRAboutVersion;
+extern NSString *const kPRAboutLicense;
+extern NSString *const kPRAboutWebsite;
+extern NSString *const kPRAboutForum;
+extern NSString *const kPRAboutEmail;
+extern NSString *const kPRAboutCopyright;
+extern NSString *const kPRAboutDevelopers;
+extern NSString *const kPRAboutDesignTeam;

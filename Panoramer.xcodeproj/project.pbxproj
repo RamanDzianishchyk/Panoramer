@@ -143,6 +143,14 @@
 		E7AD816F1CC998290096F1B3 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD816D1CC998290096F1B3 /* SettingsCell.m */; };
 		E7AD81701CC998290096F1B3 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AD816E1CC998290096F1B3 /* SettingsCell.xib */; };
 		E7AD81721CC99AF50096F1B3 /* BlackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81711CC99AF50096F1B3 /* BlackArrow@2x.png */; };
+		E7AD81831CC9A4DB0096F1B3 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD81751CC9A4DB0096F1B3 /* AboutController.m */; };
+		E7AD81841CC9A4DB0096F1B3 /* AboutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81761CC9A4DB0096F1B3 /* AboutController.xib */; };
+		E7AD81851CC9A4DB0096F1B3 /* FAQController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD81791CC9A4DB0096F1B3 /* FAQController.m */; };
+		E7AD81861CC9A4DB0096F1B3 /* FAQController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AD817A1CC9A4DB0096F1B3 /* FAQController.xib */; };
+		E7AD81871CC9A4DB0096F1B3 /* TermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD817D1CC9A4DB0096F1B3 /* TermsViewController.m */; };
+		E7AD81881CC9A4DB0096F1B3 /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AD817E1CC9A4DB0096F1B3 /* TermsViewController.xib */; };
+		E7AD81891CC9A4DB0096F1B3 /* WriteToUs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD81811CC9A4DB0096F1B3 /* WriteToUs.m */; };
+		E7AD818A1CC9A4DB0096F1B3 /* WriteToUs.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81821CC9A4DB0096F1B3 /* WriteToUs.xib */; };
 		E7BBE8F61C0CA7B400C78554 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BBE8F51C0CA7B400C78554 /* CoreData.framework */; };
 		E7D29D8A1C206EC600FD58F6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D29D891C206EC600FD58F6 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -395,6 +403,18 @@
 		E7AD816D1CC998290096F1B3 /* SettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsCell.m; sourceTree = "<group>"; };
 		E7AD816E1CC998290096F1B3 /* SettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
 		E7AD81711CC99AF50096F1B3 /* BlackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlackArrow@2x.png"; sourceTree = "<group>"; };
+		E7AD81741CC9A4DB0096F1B3 /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
+		E7AD81751CC9A4DB0096F1B3 /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
+		E7AD81761CC9A4DB0096F1B3 /* AboutController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutController.xib; sourceTree = "<group>"; };
+		E7AD81781CC9A4DB0096F1B3 /* FAQController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQController.h; sourceTree = "<group>"; };
+		E7AD81791CC9A4DB0096F1B3 /* FAQController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQController.m; sourceTree = "<group>"; };
+		E7AD817A1CC9A4DB0096F1B3 /* FAQController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQController.xib; sourceTree = "<group>"; };
+		E7AD817C1CC9A4DB0096F1B3 /* TermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermsViewController.h; sourceTree = "<group>"; };
+		E7AD817D1CC9A4DB0096F1B3 /* TermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermsViewController.m; sourceTree = "<group>"; };
+		E7AD817E1CC9A4DB0096F1B3 /* TermsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermsViewController.xib; sourceTree = "<group>"; };
+		E7AD81801CC9A4DB0096F1B3 /* WriteToUs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteToUs.h; sourceTree = "<group>"; };
+		E7AD81811CC9A4DB0096F1B3 /* WriteToUs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteToUs.m; sourceTree = "<group>"; };
+		E7AD81821CC9A4DB0096F1B3 /* WriteToUs.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteToUs.xib; sourceTree = "<group>"; };
 		E7BBE8F51C0CA7B400C78554 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E7D29D891C206EC600FD58F6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -493,6 +513,10 @@
 		E76B3C0D1CC53AE8004F7490 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				E7AD81731CC9A4DB0096F1B3 /* About */,
+				E7AD81771CC9A4DB0096F1B3 /* FAQ */,
+				E7AD817B1CC9A4DB0096F1B3 /* Terms */,
+				E7AD817F1CC9A4DB0096F1B3 /* WriteToUs */,
 				E7AD815D1CC97B360096F1B3 /* SettingsController */,
 				E7AD81571CC979C00096F1B3 /* ProfileController */,
 				E76B3D611CC541FC004F7490 /* MapController */,
@@ -952,6 +976,46 @@
 			path = SettingsController/SettingsCell;
 			sourceTree = "<group>";
 		};
+		E7AD81731CC9A4DB0096F1B3 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				E7AD81741CC9A4DB0096F1B3 /* AboutController.h */,
+				E7AD81751CC9A4DB0096F1B3 /* AboutController.m */,
+				E7AD81761CC9A4DB0096F1B3 /* AboutController.xib */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		E7AD81771CC9A4DB0096F1B3 /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				E7AD81781CC9A4DB0096F1B3 /* FAQController.h */,
+				E7AD81791CC9A4DB0096F1B3 /* FAQController.m */,
+				E7AD817A1CC9A4DB0096F1B3 /* FAQController.xib */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
+		E7AD817B1CC9A4DB0096F1B3 /* Terms */ = {
+			isa = PBXGroup;
+			children = (
+				E7AD817C1CC9A4DB0096F1B3 /* TermsViewController.h */,
+				E7AD817D1CC9A4DB0096F1B3 /* TermsViewController.m */,
+				E7AD817E1CC9A4DB0096F1B3 /* TermsViewController.xib */,
+			);
+			path = Terms;
+			sourceTree = "<group>";
+		};
+		E7AD817F1CC9A4DB0096F1B3 /* WriteToUs */ = {
+			isa = PBXGroup;
+			children = (
+				E7AD81801CC9A4DB0096F1B3 /* WriteToUs.h */,
+				E7AD81811CC9A4DB0096F1B3 /* WriteToUs.m */,
+				E7AD81821CC9A4DB0096F1B3 /* WriteToUs.xib */,
+			);
+			path = WriteToUs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1022,6 +1086,7 @@
 				E76B3D441CC53AE9004F7490 /* 1_preview.jpg in Resources */,
 				E76B3D4B1CC53AE9004F7490 /* hotspot_blue.png in Resources */,
 				E76B3D011CC53AE9004F7490 /* PRTourCell.xib in Resources */,
+				E7AD81841CC9A4DB0096F1B3 /* AboutController.xib in Resources */,
 				E76B3D421CC53AE9004F7490 /* 1_2.jpg in Resources */,
 				E76B3CFA1CC53AE9004F7490 /* PRSceneCell.xib in Resources */,
 				E7AD816A1CC997810096F1B3 /* settingsIcon@2x.png in Resources */,
@@ -1042,6 +1107,7 @@
 				E76B3D461CC53AE9004F7490 /* 2_preview.jpg in Resources */,
 				E76B3D411CC53AE9004F7490 /* 1_1.jpg in Resources */,
 				E7AD81561CC979910096F1B3 /* profileIcon@2x.png in Resources */,
+				E7AD81861CC9A4DB0096F1B3 /* FAQController.xib in Resources */,
 				E76B3D471CC53AE9004F7490 /* 3.jpg in Resources */,
 				E76B3D4A1CC53AE9004F7490 /* 4_preview.jpg in Resources */,
 				E76B3D4D1CC53AE9004F7490 /* pinRed.png in Resources */,
@@ -1049,6 +1115,7 @@
 				5C21CE6C15A3D5E40089E908 /* icon.png in Resources */,
 				E76B3CF61CC53AE9004F7490 /* PRSceneController.xib in Resources */,
 				E76B3D481CC53AE9004F7490 /* 3_preview.jpg in Resources */,
+				E7AD818A1CC9A4DB0096F1B3 /* WriteToUs.xib in Resources */,
 				E76B3D6F1CC54DB4004F7490 /* toursIcon@2x.png in Resources */,
 				E76B3CFF1CC53AE9004F7490 /* PRToursController.xib in Resources */,
 				E76B3CEE1CC53AE9004F7490 /* InfoPlist.strings in Resources */,
@@ -1058,6 +1125,7 @@
 				E76B3CF81CC53AE9004F7490 /* TopBar.xib in Resources */,
 				E7AD81541CC974A20096F1B3 /* Panoramer-Info.plist in Resources */,
 				E76B3CF11CC53AE9004F7490 /* PRInfoController.xib in Resources */,
+				E7AD81881CC9A4DB0096F1B3 /* TermsViewController.xib in Resources */,
 				E76B3D4C1CC53AE9004F7490 /* hotspot_red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1073,6 +1141,8 @@
 				E76B3D321CC53AE9004F7490 /* Image+CoreDataProperties.m in Sources */,
 				E76B3D4F1CC53AE9004F7490 /* PRConstants.m in Sources */,
 				E76B3D271CC53AE9004F7490 /* PLUtils.m in Sources */,
+				E7AD81891CC9A4DB0096F1B3 /* WriteToUs.m in Sources */,
+				E7AD81831CC9A4DB0096F1B3 /* AboutController.m in Sources */,
 				E76B3D1C1CC53AE9004F7490 /* PLRenderer.m in Sources */,
 				E76B3D301CC53AE9004F7490 /* Hotspot+CoreDataProperties.m in Sources */,
 				E76B3D0B1CC53AE9004F7490 /* glues_registry.c in Sources */,
@@ -1090,6 +1160,7 @@
 				E76B3D0F1CC53AE9004F7490 /* PLCubicPanorama.m in Sources */,
 				E76B3D151CC53AE9004F7490 /* PLLog.m in Sources */,
 				E76B3D131CC53AE9004F7490 /* PLIntersection.m in Sources */,
+				E7AD81851CC9A4DB0096F1B3 /* FAQController.m in Sources */,
 				E76B3D191CC53AE9004F7490 /* PLOpenGLSupport.m in Sources */,
 				E76B3CEF1CC53AE9004F7490 /* ATMenuBaseController.m in Sources */,
 				E76B3D3E1CC53AE9004F7490 /* TransitionHotspot.m in Sources */,
@@ -1104,6 +1175,7 @@
 				E76B3D3C1CC53AE9004F7490 /* Tour.m in Sources */,
 				E76B3D381CC53AE9004F7490 /* Model.xcdatamodeld in Sources */,
 				E76B3CEC1CC53AE9004F7490 /* AppDelegate.m in Sources */,
+				E7AD81871CC9A4DB0096F1B3 /* TermsViewController.m in Sources */,
 				E76B3D2E1CC53AE9004F7490 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				E76B3CFE1CC53AE9004F7490 /* PRToursController.m in Sources */,
 				E76B3D391CC53AE9004F7490 /* Scene+CoreDataProperties.m in Sources */,
