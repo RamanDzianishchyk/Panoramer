@@ -9,6 +9,7 @@
 #import "ATMenuBaseController+Protected.h"
 #import "BZLimitedTFController.h"
 #import "PREditUserController.h"
+#import "PRSettingsController.h"
 #import "User.h"
 
 @interface PREditUserController ()<UITableViewDelegate, UITableViewDataSource>
@@ -39,7 +40,14 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.title = @"Профиль";
+  [self.avatarContainer setCornersRadius:CGRectGetWidth(self.avatarContainer.bounds) / 2.0
+                         withBorderWidth:1
+                         withBorderColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
+  [self.doneButton setBackgroundColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
+  [self.doneButton setCornersRadius:5 withBorderWidth:1 withBorderColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
+  UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsBtnTap)];
+  [anotherButton setImage:[UIImage imageNamed:@"settingsIcon.png"]];
+  self.navigationItem.rightBarButtonItem = anotherButton;
   [self configureInputController];
 }
 
@@ -55,6 +63,19 @@
   // TODO: Send results to server
 }
 
+- (void)onSettingsBtnTap {
+  PRSettingsController *vc = [PRSettingsController new];
+  __weak typeof(self) weakSelf = self;
+  vc.completion = ^{
+    [weakSelf.tabBarController.tabBar setAlpha:1.0];
+  };
+  [UIView animateWithDuration:0.5
+                   animations:^{
+                     [weakSelf.tabBarController.tabBar setAlpha:0.0];
+                   }];
+  [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
   [self.view endEditing:YES];
 }
@@ -67,6 +88,7 @@
                                                             showInvalidChars:YES];
   [self addChildViewController:self.nicknameController];
   [self.nicknameContiainer addSubview:self.nicknameController.view];
+  [self.nicknameContiainer setCornersRadius:5 withBorderWidth:1 withBorderColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
   [self.nicknameController.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 8, 0, 8)];
   [self.nicknameController setPlaceholderText:@"Никнейм"];
   [self.nicknameController setTextColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
@@ -78,6 +100,7 @@
                                                              showInvalidChars:YES];
   [self addChildViewController:self.firstNameController];
   [self.firstNameContainer addSubview:self.firstNameController.view];
+  [self.firstNameContainer setCornersRadius:5 withBorderWidth:1 withBorderColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
   [self.firstNameController.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 8, 0, 8)];
   [self.firstNameController setPlaceholderText:@"Имя"];
   [self.firstNameController setTextColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
@@ -89,6 +112,7 @@
                                                             showInvalidChars:YES];
   [self addChildViewController:self.passwordController];
   [self.passwordContainer addSubview:self.passwordController.view];
+  [self.passwordContainer setCornersRadius:5 withBorderWidth:1 withBorderColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
   [self.passwordController.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 8, 0, 8)];
   [self.passwordController setPlaceholderText:@"Пароль"];
   [self.passwordController setTextColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
@@ -98,6 +122,7 @@
                                                           allowedCharSet:[NSMutableCharacterSet alphanumericCharacterSet]
                                                                   prefix:nil
                                                         showInvalidChars:YES];
+  [self.cityContainer setCornersRadius:5 withBorderWidth:1 withBorderColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
   [self addChildViewController:self.cityController];
   [self.cityContainer addSubview:self.cityController.view];
   [self.cityController.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 8, 0, 8)];

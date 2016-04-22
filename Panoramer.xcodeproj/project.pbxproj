@@ -134,8 +134,6 @@
 		E76B3D721CC54F54004F7490 /* mainBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = E76B3D711CC54F54004F7490 /* mainBkg.png */; };
 		E7AD81541CC974A20096F1B3 /* Panoramer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81531CC974A20096F1B3 /* Panoramer-Info.plist */; };
 		E7AD81561CC979910096F1B3 /* profileIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81551CC979910096F1B3 /* profileIcon@2x.png */; };
-		E7AD815B1CC979F90096F1B3 /* PRProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD81591CC979F90096F1B3 /* PRProfileController.m */; };
-		E7AD815C1CC979F90096F1B3 /* PRProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AD815A1CC979F90096F1B3 /* PRProfileController.xib */; };
 		E7AD81611CC97BCA0096F1B3 /* PRSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD815F1CC97BCA0096F1B3 /* PRSettingsController.m */; };
 		E7AD81621CC97BCA0096F1B3 /* PRSettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81601CC97BCA0096F1B3 /* PRSettingsController.xib */; };
 		E7AD81681CC98C060096F1B3 /* infoIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AD81671CC98C060096F1B3 /* infoIcon@2x.png */; };
@@ -156,6 +154,8 @@
 		F18DC1CC1CC9B0EC00948961 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1C91CC9B0EC00948961 /* DateFormatter.m */; };
 		F18DC1CD1CC9B0EC00948961 /* NSString+NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC1CB1CC9B0EC00948961 /* NSString+NSStringAdditions.m */; };
 		F18DC1CF1CC9B16300948961 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18DC1CE1CC9B16300948961 /* Security.framework */; };
+		F18DC1D11CC9B3C900948961 /* noAvatarImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F18DC1D01CC9B3C900948961 /* noAvatarImage.png */; };
+		F18DC1D31CC9B4F200948961 /* avatarBkg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F18DC1D21CC9B4F200948961 /* avatarBkg.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -394,9 +394,6 @@
 		E76B3D711CC54F54004F7490 /* mainBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBkg.png; sourceTree = "<group>"; };
 		E7AD81531CC974A20096F1B3 /* Panoramer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Panoramer-Info.plist"; sourceTree = "<group>"; };
 		E7AD81551CC979910096F1B3 /* profileIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profileIcon@2x.png"; sourceTree = "<group>"; };
-		E7AD81581CC979F90096F1B3 /* PRProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PRProfileController.h; path = ProfileController/PRProfileController.h; sourceTree = "<group>"; };
-		E7AD81591CC979F90096F1B3 /* PRProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PRProfileController.m; path = ProfileController/PRProfileController.m; sourceTree = "<group>"; };
-		E7AD815A1CC979F90096F1B3 /* PRProfileController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PRProfileController.xib; path = ProfileController/PRProfileController.xib; sourceTree = "<group>"; };
 		E7AD815E1CC97BCA0096F1B3 /* PRSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PRSettingsController.h; path = SettingsController/PRSettingsController.h; sourceTree = "<group>"; };
 		E7AD815F1CC97BCA0096F1B3 /* PRSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PRSettingsController.m; path = SettingsController/PRSettingsController.m; sourceTree = "<group>"; };
 		E7AD81601CC97BCA0096F1B3 /* PRSettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PRSettingsController.xib; path = SettingsController/PRSettingsController.xib; sourceTree = "<group>"; };
@@ -426,6 +423,8 @@
 		F18DC1CA1CC9B0EC00948961 /* NSString+NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringAdditions.h"; sourceTree = "<group>"; };
 		F18DC1CB1CC9B0EC00948961 /* NSString+NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringAdditions.m"; sourceTree = "<group>"; };
 		F18DC1CE1CC9B16300948961 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F18DC1D01CC9B3C900948961 /* noAvatarImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noAvatarImage.png; path = ../../../../Desktop/noAvatarImage.png; sourceTree = "<group>"; };
+		F18DC1D21CC9B4F200948961 /* avatarBkg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = avatarBkg.jpg; path = ../../../../Desktop/avatarBkg.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -531,7 +530,6 @@
 			children = (
 				F18DC1A91CC9B07600948961 /* EditUserController */,
 				E7AD815D1CC97B360096F1B3 /* SettingsController */,
-				E7AD81571CC979C00096F1B3 /* ProfileController */,
 				E76B3D611CC541FC004F7490 /* MapController */,
 				E76B3C0E1CC53AE8004F7490 /* BaseController */,
 				E76B3C111CC53AE8004F7490 /* InfoController */,
@@ -886,6 +884,8 @@
 		E76B3CD71CC53AE9004F7490 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F18DC1D21CC9B4F200948961 /* avatarBkg.jpg */,
+				F18DC1D01CC9B3C900948961 /* noAvatarImage.png */,
 				E7AD81711CC99AF50096F1B3 /* BlackArrow@2x.png */,
 				E7AD81691CC997810096F1B3 /* settingsIcon@2x.png */,
 				E7AD81671CC98C060096F1B3 /* infoIcon@2x.png */,
@@ -960,16 +960,6 @@
 				E76B3D641CC54231004F7490 /* MapController.xib */,
 			);
 			path = MapController;
-			sourceTree = "<group>";
-		};
-		E7AD81571CC979C00096F1B3 /* ProfileController */ = {
-			isa = PBXGroup;
-			children = (
-				E7AD81581CC979F90096F1B3 /* PRProfileController.h */,
-				E7AD81591CC979F90096F1B3 /* PRProfileController.m */,
-				E7AD815A1CC979F90096F1B3 /* PRProfileController.xib */,
-			);
-			name = ProfileController;
 			sourceTree = "<group>";
 		};
 		E7AD815D1CC97B360096F1B3 /* SettingsController */ = {
@@ -1097,6 +1087,7 @@
 			files = (
 				E7AD81621CC97BCA0096F1B3 /* PRSettingsController.xib in Resources */,
 				E76B3D661CC54231004F7490 /* MapController.xib in Resources */,
+				F18DC1D11CC9B3C900948961 /* noAvatarImage.png in Resources */,
 				E76B3D451CC53AE9004F7490 /* 2.jpg in Resources */,
 				E76B3CFC1CC53AE9004F7490 /* PRTourController.xib in Resources */,
 				E76B3D441CC53AE9004F7490 /* 1_preview.jpg in Resources */,
@@ -1109,11 +1100,11 @@
 				E76B3D401CC53AE9004F7490 /* 1.jpg in Resources */,
 				F18DC1AE1CC9B07600948961 /* PREditUserController.xib in Resources */,
 				E7AD81701CC998290096F1B3 /* SettingsCell.xib in Resources */,
+				F18DC1D31CC9B4F200948961 /* avatarBkg.jpg in Resources */,
 				E76B3D2B1CC53AE9004F7490 /* README.txt in Resources */,
 				E7AD81681CC98C060096F1B3 /* infoIcon@2x.png in Resources */,
 				E76B3CF31CC53AE9004F7490 /* LoginViewController.xib in Resources */,
 				E76B3D051CC53AE9004F7490 /* LaunchScreen.xib in Resources */,
-				E7AD815C1CC979F90096F1B3 /* PRProfileController.xib in Resources */,
 				E76B3D531CC53C3B004F7490 /* loginBkg.png in Resources */,
 				E76B3D431CC53AE9004F7490 /* 1_3.jpg in Resources */,
 				E76B3D491CC53AE9004F7490 /* 4.jpg in Resources */,
@@ -1234,7 +1225,6 @@
 				E76B3D201CC53AE9004F7490 /* PLSpherical2Panorama.m in Sources */,
 				E76B3D081CC53AE9004F7490 /* glues_mipmap.c in Sources */,
 				E7AD816F1CC998290096F1B3 /* SettingsCell.m in Sources */,
-				E7AD815B1CC979F90096F1B3 /* PRProfileController.m in Sources */,
 				E76B3D1A1CC53AE9004F7490 /* PLPanoramaBase.m in Sources */,
 				E76B3D021CC53AE9004F7490 /* MBProgressHUD.m in Sources */,
 				E76B3D2D1CC53AE9004F7490 /* NSArray+PureLayout.m in Sources */,
