@@ -78,15 +78,6 @@ CGFloat const kPRSceneCellHeight = 100;
   [self.tableView reloadData];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-  if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-    if (self.completion != nil) {
-      self.completion();
-    }
-  }
-  [super viewWillDisappear:animated];
-}
-
 - (void)viewDidDisappear:(BOOL)animated {
   [self lockScreen:NO];
   [super viewDidDisappear:animated];

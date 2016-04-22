@@ -6,8 +6,8 @@
 //  Copyright © 2015 Senla. All rights reserved.
 //
 
-#import "ATMenuBaseController.h"
 #import "ATMenuBaseController+Protected.h"
+#import "ATMenuBaseController.h"
 #import "TopBar.h"
 
 @interface ATMenuBaseController ()
@@ -24,6 +24,15 @@
   [topBar_ autoPinEdgeToSuperviewEdge:ALEdgeLeft];
   [topBar_ autoPinEdgeToSuperviewEdge:ALEdgeRight];
   [topBar_ autoSetDimension:ALDimensionHeight toSize:kPRTopBarHeight];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
+    if (self.completion != nil) {
+      self.completion();
+    }
+  }
+  [super viewWillDisappear:animated];
 }
 
 - (void)lockScreen:(BOOL)lock {

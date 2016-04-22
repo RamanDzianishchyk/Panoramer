@@ -6,9 +6,13 @@
 //  Copyright © 2016 GRSU. All rights reserved.
 //
 
+#import "AboutController.h"
 #import "AppDelegate.h"
+#import "FAQController.h"
 #import "PRSettingsController.h"
 #import "SettingsCell.h"
+#import "TermsViewController.h"
+#import "WriteToUs.h"
 
 CGFloat const kPRDefaultRowHeight = 70;
 NSString *const kPRSettingsCellId = @"settingsCellId";
@@ -26,6 +30,8 @@ typedef NS_ENUM(NSUInteger, SettingCellType) {
 @interface PRSettingsController ()<UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
 
 @property(weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (void)displayController:(ATMenuBaseController *)controller;
 
 @end
 
@@ -75,6 +81,7 @@ typedef NS_ENUM(NSUInteger, SettingCellType) {
       [cell setType:SettingsCellTypeArrow];
       [cell.mainLabel setText:@"Напишите нам"];
       cell.onCellTap = ^{
+        [weakSelf displayController:[WriteToUs new]];
       };
       break;
     }
@@ -82,6 +89,7 @@ typedef NS_ENUM(NSUInteger, SettingCellType) {
       [cell setType:SettingsCellTypeArrow];
       [cell.mainLabel setText:@"Вопросы-Ответы"];
       cell.onCellTap = ^{
+        [weakSelf displayController:[FAQController new]];
       };
       break;
     }
@@ -89,7 +97,7 @@ typedef NS_ENUM(NSUInteger, SettingCellType) {
       [cell setType:SettingsCellTypeArrow];
       [cell.mainLabel setText:@"Правила ползования"];
       cell.onCellTap = ^{
-
+        [weakSelf displayController:[TermsViewController new]];
       };
       break;
     }
@@ -97,6 +105,7 @@ typedef NS_ENUM(NSUInteger, SettingCellType) {
       [cell setType:SettingsCellTypeArrow];
       [cell.mainLabel setText:@"О нас"];
       cell.onCellTap = ^{
+        [weakSelf displayController:[AboutController new]];
       };
       break;
     }
@@ -136,6 +145,23 @@ typedef NS_ENUM(NSUInteger, SettingCellType) {
     default:
       break;
   }
+}
+
+#pragma mark - Private Methods
+- (void)displayController:(ATMenuBaseController *)controller {
+  __weak typeof(self) weakSelf = self;
+  [UIView animateWithDuration:0.1
+      animations:^{
+        [weakSelf.tableView setAlpha:0.0];
+      }
+      completion:^(BOOL finished) {
+        if (finished) {
+          controller.completion = ^{
+            [weakSelf.tableView setAlpha:1.0];
+          };
+          [weakSelf.navigationController pushViewController:controller animated:YES];
+        }
+      }];
 }
 
 @end

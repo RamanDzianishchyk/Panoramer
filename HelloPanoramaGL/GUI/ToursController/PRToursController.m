@@ -98,7 +98,7 @@
                            animations:^{
                              [weakSelf.tabBarController.tabBar setAlpha:0.0];
                            }];
-          [self.navigationController pushViewController:vc animated:YES];
+          [weakSelf.navigationController pushViewController:vc animated:YES];
         }
       }];
 }

@@ -17,6 +17,8 @@ NSInteger const kPRTopBarHeight = 64;
 
 #pragma mark - Colors
 NSUInteger const kPRMainThemeColor = 0x40B14E;
+NSUInteger const kPRPlaceholderColor = 0xa9b6bc;
+NSUInteger const kPRTextColor = 0x546e7a;
 
 #pragma mark - Limits
 NSInteger const kPRNicknameMaxLength = 15;
@@ -41,3 +43,13 @@ NSString *const kLMRequestedUserAuthorizationKey = @"requestAuthorizationKey";
 
 #pragma mark - Map
 NSString *const kPRTilesTemplate = @"http://tile.openstreetmap.org/{z}/{x}/{y}.png";
+
+#pragma mark - Settings -> About
+NSString *const kPRAboutVersion = @"1.0";
+NSString *const kPRAboutLicense = @"Freeware";
+NSString *const kPRAboutWebsite = @"www.example.com";
+NSString *const kPRAboutForum = @"www.example.com/forum";
+NSString *const kPRAboutEmail = @"mail@some.mail";
+NSString *const kPRAboutCopyright = @"© 2016 Panoramer Application";
+NSString *const kPRAboutDevelopers = @"Raman Dzianishchyk Uladzimir Basko";
+NSString *const kPRAboutDesignTeam = @"© 2016 Example Studio";

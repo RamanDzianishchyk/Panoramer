@@ -12,8 +12,6 @@
 
 @interface PRTourController : ATMenuBaseController
 
-@property(nonatomic, copy) void( (^completion)(void));
-
 - (instancetype)initWithTour:(Tour *)tour;
 
 @end

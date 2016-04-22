@@ -10,6 +10,8 @@
 
 @interface ATMenuBaseController : UIViewController
 
+@property(nonatomic, copy) void( (^completion)(void));
+
 - (void)lockScreen:(BOOL)lock;
 
 @end
