@@ -39,10 +39,12 @@
   [self.scrollView setAlpha:(isImageInfo_) ? 1.0 : 0.0];
   [self.textView setAlpha:(!isImageInfo_) ? 1.0 : 0.0];
 
-  [self.textView setCornersRadius:10 withBorderWidth:1 withBorderColor:self.closeButton.backgroundColor];
-  [self.titleLabel setTextColor:UIColorFromHexRGB(kPRMainThemeColor, 1)];
+  [self.textView setCornersRadius:10 withBorderWidth:1 withBorderColor:[UIColor whiteColor]];
+  [self.titleLabel setTextColor:[UIColor whiteColor]];
   [self.textView setTextColor:UIColorFromHexRGB(kPRMainThemeColor, 1)];
-  [self.scrollView setCornersRadius:10 withBorderWidth:1 withBorderColor:self.closeButton.backgroundColor];
+  [self.view setCornersRadius:10 withBorderWidth:1 withBorderColor:[UIColor clearColor]];
+  [self.view setBackgroundColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
+  [self.closeButton setCornersRadius:10 withBorderWidth:1 withBorderColor:[UIColor whiteColor]];
 
   if (self.image != nil && self.mainDescriprion.length > 0) {
     self.pageControlConstraintHeight.constant = 40;

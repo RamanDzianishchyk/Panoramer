@@ -20,6 +20,11 @@
 
 @implementation PRTourCell
 
+- (void)awakeFromNib {
+  [super awakeFromNib];
+  [self.titleLabel setBackgroundColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
+}
+
 #pragma mark - Public Interface
 - (void)setImage:(UIImage *)image {
   if (image != nil) {
@@ -29,7 +34,12 @@
 }
 
 - (void)roundCell {
-  [self.containerView setCornersRadius:5 withBorderWidth:1 withBorderColor:[UIColor whiteColor]];
+  [self layoutIfNeeded];
+  [self.containerView setCornersRadius:5 withBorderWidth:1 withBorderColor:[UIColor clearColor]];
+  [self.titleLabel setCorner:(UIRectCornerBottomLeft | UIRectCornerBottomRight)
+                      radius:5
+             withBorderWidth:1
+             withBorderColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
 }
 
 #pragma mark - Private Interface

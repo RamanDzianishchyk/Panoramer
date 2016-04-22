@@ -828,6 +828,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.window.bounds];
     [imageView setImage:[UIImage imageNamed:@"mainBkg.png"]];
+    [self.window addSubview:imageView];
     [self.window makeKeyAndVisible];
   }
   [self setupLoginController];
@@ -890,6 +891,17 @@
 
 - (void)setupMainScreen {
   UITabBarController *tabBarController = [[UITabBarController alloc] init];
+  [tabBarController.tabBar setBarTintColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
+
+  [UITabBarItem.appearance setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor grayColor] } forState:UIControlStateNormal];
+  [UITabBarItem.appearance setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor] } forState:UIControlStateSelected];
+  [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
+
+  [[UINavigationBar appearance] setTitleTextAttributes:@{
+    NSForegroundColorAttributeName : UIColorFromHexRGB(0x007AE1, 1.0),
+    NSFontAttributeName : [UIFont fontWithName:@"ArialMT" size:26.0]
+  }];
+  [[UINavigationBar appearance] setBackgroundColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
 
   PRToursController *toursVC = [PRToursController new];
   toursVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Туры" image:[UIImage imageNamed:@"toursIcon.png"] tag:1];
@@ -897,7 +909,11 @@
   mapVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Карта" image:[UIImage imageNamed:@"mapIcon.png"] tag:2];
   PRProfileController *profileVC = [PRProfileController new];
   profileVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Профиль" image:[UIImage imageNamed:@"profileIcon.png"] tag:3];
-  [tabBarController setViewControllers:@[ toursVC, mapVC, profileVC ]];
+  [tabBarController setViewControllers:@[
+    [[UINavigationController alloc] initWithRootViewController:toursVC],
+    [[UINavigationController alloc] initWithRootViewController:mapVC],
+    [[UINavigationController alloc] initWithRootViewController:profileVC]
+  ]];
   [self.window setRootViewController:tabBarController];
 }
 

@@ -6,14 +6,14 @@
 //  Copyright © 2015 GRSU. All rights reserved.
 //
 
-#import "PRTourController.h"
 #import "ATMenuBaseController+Protected.h"
-#import "PRSceneCell.h"
-#import "PRSceneController.h"
-#import "Tour.h"
-#import "Scene.h"
 #import "Image.h"
 #import "PRInfoController.h"
+#import "PRSceneCell.h"
+#import "PRSceneController.h"
+#import "PRTourController.h"
+#import "Scene.h"
+#import "Tour.h"
 
 CGFloat const kPRSceneCellHeight = 100;
 
@@ -25,6 +25,7 @@ CGFloat const kPRSceneCellHeight = 100;
 @property(nonatomic, strong) PRInfoController *infoController;
 
 - (IBAction)onStartBtnTap:(id)sender;
+- (void)onInfoBtnTap;
 - (void)showSceneControllerWithScene:(Scene *)scene;
 
 @end
@@ -43,6 +44,7 @@ CGFloat const kPRSceneCellHeight = 100;
   [super viewDidLoad];
   [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PRSceneCell class]) bundle:[NSBundle mainBundle]]
        forCellReuseIdentifier:NSStringFromClass([PRSceneCell class])];
+  [self.startTourBtn setBackgroundColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
 
   [self.infoContainer setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.6]];
   self.infoController = [[PRInfoController alloc] initForImageInfo:NO];
@@ -66,35 +68,23 @@ CGFloat const kPRSceneCellHeight = 100;
 
   };
 
-  [self setTopBarTitle:self.tour.title];
-  [self.view setBackgroundColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
-  [self.leftTopButton setHidden:NO];
-  [self.leftTopButton setTitle:@"<" forState:UIControlStateNormal];
-  [self.leftTopButton setTitleColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0) forState:UIControlStateNormal];
-  [self setTopBarTitleColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
-  [self setTopBarBottomBorderColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
-
-  [self setOnLeftTopButtonTapBlock:^{
-    [weakSelf dismissViewControllerAnimated:YES completion:nil];
-  }];
-
-  [[self rightTopButton] setHidden:NO];
-  [[self rightTopButton] setTitle:@"i" forState:UIControlStateNormal];
-  [[self rightTopButton] setTitleColor:UIColorFromHexRGB(kPRMainThemeColor, 1) forState:UIControlStateNormal];
-  [self setOnRightTopButtonTapBlock:^{
-    [UIView animateWithDuration:0.2
-                     animations:^{
-                       [weakSelf.rightTopButton setAlpha:0.0];
-                       [weakSelf setTopBarColor:weakSelf.infoContainer.backgroundColor];
-                       [weakSelf.infoContainer setAlpha:1.0];
-                     }];
-    [weakSelf.infoContainer setUserInteractionEnabled:YES];
-  }];
+  UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStylePlain target:self action:@selector(onInfoBtnTap)];
+  [anotherButton setImage:[UIImage imageNamed:@"infoIcon.png"]];
+  self.navigationItem.rightBarButtonItem = anotherButton;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   [self.tableView reloadData];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
+    if (self.completion != nil) {
+      self.completion();
+    }
+  }
+  [super viewWillDisappear:animated];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -119,7 +109,7 @@ CGFloat const kPRSceneCellHeight = 100;
   Scene *scene = [self.tour.scenes objectAtIndex:indexPath.row];
   PRSceneCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([PRSceneCell class]) forIndexPath:indexPath];
   [cell setImage:[UIImage imageNamed:scene.preview.path]];
-  [cell.mainTitle setTextColor:UIColorFromHexRGB(kPRMainThemeColor, 1.0)];
+  [cell.mainTitle setTextColor:[UIColor whiteColor]];
   [cell.mainTitle setText:scene.title];
   [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
   return cell;
@@ -139,6 +129,17 @@ CGFloat const kPRSceneCellHeight = 100;
 - (IBAction)onStartBtnTap:(id)sender {
   [self lockScreen:YES];
   [self showSceneControllerWithScene:[self.tour.scenes firstObject]];
+}
+
+- (void)onInfoBtnTap {
+  __weak typeof(self) weakSelf = self;
+  [UIView animateWithDuration:0.2
+                   animations:^{
+                     [weakSelf.rightTopButton setAlpha:0.0];
+                     [weakSelf setTopBarColor:weakSelf.infoContainer.backgroundColor];
+                     [weakSelf.infoContainer setAlpha:1.0];
+                   }];
+  [self.infoContainer setUserInteractionEnabled:YES];
 }
 
 - (void)showSceneControllerWithScene:(Scene *)scene {

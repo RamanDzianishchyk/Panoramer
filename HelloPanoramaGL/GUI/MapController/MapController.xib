@@ -17,12 +17,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aYT-yA-VS2">
-                    <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="HQI-ap-Qdn"/>
+                    </connections>
                 </mapView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="aYT-yA-VS2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Iig-sk-LQP"/>
+                <constraint firstItem="aYT-yA-VS2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Iig-sk-LQP"/>
                 <constraint firstItem="aYT-yA-VS2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="InE-Dl-Q0P"/>
                 <constraint firstAttribute="bottom" secondItem="aYT-yA-VS2" secondAttribute="bottom" id="Ob4-xg-B8G"/>
                 <constraint firstAttribute="trailing" secondItem="aYT-yA-VS2" secondAttribute="trailing" id="Otd-A6-scy"/>
